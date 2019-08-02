@@ -1,0 +1,39 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 20/12/2017 07:48
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("../fonts/Flaticon.html");
+  src: url("../fonts/Flaticond41d.html?#iefix") format("embedded-opentype"),
+       url("../fonts/Flaticon-2.html") format("woff"),
+       url("../fonts/Flaticon-3.html") format("truetype"),
+       url("../fonts/Flaticon-4.html#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("Flaticon.html#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+.flaticon-google-plus-logo-button:before { content: "\f100"; }
+.flaticon-dribble-logo-button:before { content: "\f101"; }
+.flaticon-linkedin-button:before { content: "\f102"; }
+.flaticon-twitter-logo-button:before { content: "\f103"; }
+.flaticon-facebook-logo-button:before { content: "\f104"; }
+.flaticon-mail:before { content: "\f105"; }
+.flaticon-phone-call:before { content: "\f106"; }
+.flaticon-placeholder:before { content: "\f107"; }

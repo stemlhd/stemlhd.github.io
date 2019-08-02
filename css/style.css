@@ -1,0 +1,1390 @@
+@charset "utf-8";
+
+/* CSS Document 
+Project Name: ICT - Conference HTML Template
+Version:  1.0   
+Author Name: bdCoder
+
+*****=====***** TABLE OF CONTENT *****=====*****
+
+01. IMPORTED STYLE CSS
+02. GENERAL CSS
+        => Form CSS
+        => Placeholder Color CSS
+        => BUtton CSS
+        => Background Over Layer CSS
+        => Default Title CSS
+        => Preloader CSS
+        => Scrollup CSS
+03. Header Nav CSS
+        => NavBar Fixed CSS
+        => Nav Transparent CSS
+        => Header CSS Two
+04. Banner CSS
+        => Banner CSS Two
+        => Particles CSS
+05. About CSS
+06. Speakers CSS
+07. Organizer CSS
+08. Ticket CSS
+09. Schedule CSS
+10. Venue CSS
+11. Blog CSS
+12. counter CSS
+13. Sponsor CSS
+14. Contact CSS 
+15. Footer CSS 
+16. Demo Page CSS
+
+*/
+
+/*****=====*****=====*****=====*****=====
+    01. IMPORTED STYLE CSS
+=====*****=====*****=====*****=====*****/
+
+/* GOOGLE FONTs */
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|Roboto:400,400i,500,500i,700,700i,900,900i');
+
+/* OTHER IMPORTED CSS */
+@import "font-awesome.min.css";
+@import "flaticon.css";
+@import "scrolling-nav.css";
+@import "animate.min.css";
+@import "owl.carousel.min.css";
+@import "owl.theme.default.css";
+@import "component.css";
+
+
+
+/*****=====*****=====*****=====*****=====
+    02. General CSS 
+=====*****=====*****=====*****=====*****/
+
+body {
+    background: #ffffff;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #4c4c4c;
+    position: relative;
+}
+/* Common CSS */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', sans-serif;
+    color: #111111;
+    line-height: 1.2;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 0;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+a:focus,
+a:hover {
+    outline: none;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+.btn {
+    font-size: 14px;
+}
+
+/* Form CSS */
+
+.form-control {
+    resize: none;
+    height: 45px;
+    font-size: 14px;
+    margin-bottom: 30px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+}
+.form-control:focus {
+    border-color: #a2a2a2;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+/* Placeholder Color CSS */
+::-webkit-input-placeholder {
+    color: #999999 !important;
+}
+::-moz-placeholder {
+    color: #999999 !important;
+}
+:-ms-input-placeholder {
+    color: #999999 !important;
+}
+:-moz-placeholder {
+    color: #999999 !important;
+}
+
+.ticket-area ::-webkit-input-placeholder {
+    color: #111111 !important;
+}
+.ticket-area ::-moz-placeholder {
+    color: #111111 !important;
+}
+.ticket-area :-ms-input-placeholder {
+    color: #111111 !important;
+}
+.ticket-area :-moz-placeholder {
+    color: #111111 !important;
+}
+
+
+/* BUtton CSS */
+.my-btn{
+    color: #ffffff;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    transition: all 0.3s ease-in-out 0s;
+}
+.my-btn:after {
+    content: "";
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transition: all 0.3s ease-in-out 0s;
+}
+.my-btn:hover:after{
+    height: 170%;
+    background: #fff;
+    opacity: 1;
+}
+.my-btn.btn-color{
+    border: none;
+    background: #F32D3A;
+}
+.my-btn.btn-color:hover{
+    color: #F32D3A;
+}
+
+
+
+/* Background Over Layer CSS */ 
+.overlay-black {
+    position: relative;
+}
+.overlay-black:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.overlay-white {
+    position: relative;
+}
+.overlay-white:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* Default Title CSS */
+.section-title {
+    margin-bottom: 60px;
+    text-align: center;
+}
+.section-title h2 {
+    font-size: 36px;
+    margin-bottom: 0;
+}
+.section-title h2 span {
+    color: #F32D3A;
+}
+
+/* Preloader CSS */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 99999999;
+}
+#status {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-image: url(../images/preloder.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px;
+}
+
+
+/* Scrollup CSS */
+#scrollUp {
+    bottom: 20px;
+    right: 20px;
+    padding: 5px 10px;
+    background-color: #F32D3A;
+    color: #ffffff;
+}
+#scrollUp:before {
+    content: "\f176";
+    font-family: FontAwesome;
+    font-size: 20px;
+}
+#scrollUp:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -15px;
+    border-right: 14.5px solid transparent;
+    border-left: 14.5px solid transparent;
+    border-bottom: 15px solid #F32D3A;
+}
+
+
+
+/*--------------------------------
+    03. Header Nav CSS Start
+----------------------------------*/
+.main-header {
+
+}
+.main-nav {
+
+}
+.main-nav .navbar {
+    margin-bottom: 0;
+    padding: 10px 0;
+}
+.main-nav .navbar-brand {
+    width: 150px;
+    height: auto;
+    padding: 0;
+    margin-top: 5px;
+}
+.logo-black {
+    display: none;
+}
+.logo-white {
+    display: block;
+}
+.top-nav-collapse .logo-white {
+    display: none;
+}
+.top-nav-collapse .logo-black {
+    display: block;
+}
+.main-nav .navbar-default .navbar-nav>li>a {
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.main-nav .navbar-default .navbar-nav>li>a:hover {
+    color: #ffffff;
+}
+.navbar-default .navbar-nav>li>a:focus {
+    color: #F32D3A;
+}
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover {
+    color: #F32D3A !important;
+    background: transparent;
+}
+
+/* NavBar Fixed CSS */
+.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    -webkit-box-shadow: 0px 8px 12px -10px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 8px 12px -10px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 12px -10px rgba(0,0,0,0.2);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+/* Nav Transparent CSS */
+.nav-transparent {
+
+}
+.nav-transparent .navbar-default {
+    background: transparent;
+    border-bottom: none;
+}
+.nav-transparent .top-nav-collapse {
+    background: #ffffff;
+    -webkit-box-shadow: 0px 8px 12px -10px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 8px 12px -10px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 12px -10px rgba(0,0,0,0.2);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.nav-transparent .navbar-default .navbar-nav>li>a {
+    color: #dedede;
+}
+.nav-transparent .top-nav-collapse .navbar-nav>li>a {
+    color: #333333;
+}
+.nav-transparent .top-nav-collapse .navbar-nav>li>a:hover {
+    color: #F32D3A;
+}
+.nav-transparent .navbar-default .navbar-nav>.active>a {
+    color: #ffffff !important;
+}
+.nav-transparent .top-nav-collapse .navbar-nav>.active>a {
+    color: #F32D3A !important;
+}
+.nav-bottom {
+    
+}
+.nav-bottom .navbar-default .navbar-nav>li>a:hover {
+    color: #F32D3A;
+}
+
+/* Header CSS Two Start */
+.main-header-two {
+    position: relative;
+}
+.main-header-two .main-nav .navbar-default {
+    background: #ffffff;
+}
+.main-header-two .main-nav .navbar-default .navbar-nav>li>a:hover {
+    color: #F32D3A;
+}
+
+
+
+
+
+/*--------------------------------
+    04. Banner CSS Start
+----------------------------------*/
+.main-banner {
+    background: url(../images/bg/1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+}
+.main-banner:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/bg/pattern.png);
+    background-repeat: repeat;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.header-banner {
+    text-align: center;
+    padding-top: 200px;
+}
+.header-banner-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    /*-moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);*/
+}
+.header-banner h1 {
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.header-banner h1 span {
+
+}
+.header-banner h3 {
+    color: #F32D3A;
+    margin-bottom: 15px;
+}
+.header-banner h4 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.countdown {
+    text-transform: uppercase;
+}
+.countdown > div { display: inline-block; }
+.countdown > div > span {
+    display: block;
+    text-align: center;
+}
+.countdown-container { 
+    margin: 0 3px;
+}
+.countdown-container .countdown-heading {
+    font-size: 16px;
+    color: #ffffff;
+}
+.countdown-container .countdown-value {
+    font-size: 40px;
+    background: #f32d3a;
+    padding: 15px 20px;
+    color: #fff;
+    margin: 0 2px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Banner CSS Two */
+.main-banner-two {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    padding: 180px 0 100px;
+    background: url(../images/bg/4.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #f3f3f3;
+}
+.main-banner-two:before {
+    background: transparent;
+}
+.main-banner-two .header-banner {
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    border-radius: 30px;
+}
+.main-banner-two .header-banner h1 {
+    line-height: 60px;
+}
+
+
+
+
+
+/* Particles CSS */
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+
+
+/*--------------------------------
+    05. About CSS Start
+----------------------------------*/
+.about-area {
+    padding: 150px 0 120px;
+    position: relative;
+}
+.about-col {
+    margin-bottom: 30px;
+}
+.about-col h3 {
+    font-size: 30px;
+}
+.about-col h3 span {
+    color: #f32d3a;
+}
+.left-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    width: 150px;
+    height: auto;
+}
+.right-img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 150px;
+    height: auto;
+}
+.about-col #accordion .panel{
+    border: none;
+    box-shadow: none;
+    border-radius: 30px;
+    margin-bottom: 15px;
+}
+.about-col #accordion .panel-heading{
+    padding: 0;
+    border-radius: 30px;
+}
+.about-col #accordion .panel-title a{
+    display: block;
+    padding: 10px 20px 10px 45px;
+    background: #f1f1e6;
+    font-size: 14px;
+    color: #F32D3A;
+    border: none;
+    border-radius: 30px;
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+.about-col #accordion .panel-title a.collapsed{ color: #333333; }
+.about-col #accordion .panel-title a:after,
+.about-col #accordion .panel-title a.collapsed:after{
+    content: "\f107";
+    font-family: fontawesome;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    background: #F32D3A;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease 0s;
+}
+.about-col #accordion .panel-title a.collapsed:after{ 
+    content: "\f105"; 
+}
+.about-col #accordion .panel-body{
+    padding: 20px 0 0 0;
+    font-size: 14px;
+    color: #656565;
+    line-height: 25px;
+    border-top: none;
+    position: relative;
+}
+.about-col #accordion .panel-body p{
+    padding: 10px 20px 10px;
+    margin: 0;
+    background: #f1f1e6;
+    border-radius: 15px;
+}
+
+
+
+/*--------------------------------
+    06. Speakers CSS Start
+----------------------------------*/
+.speakers-area {
+    padding: 90px 0 60px;
+    position: relative; 
+    background: #f4f4f4;
+    background: url(../images/bg/2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.speakers-area:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/bg/pattern.png);
+    background-repeat: repeat;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.speakers-area .section-title h2 {
+    color: #ffffff;
+}
+.speaker-col {
+    margin-bottom: 30px;
+    background: rgba(153, 153, 153, 0.6);
+    padding: 20px 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+.speaker-box{
+    text-align: center;
+    position: relative;
+}
+.speaker-box:before{
+    background: #0ac0de;
+    transform: scale(0);
+    z-index: 1;
+}
+.speaker-box:hover:before{
+    transform: scale(1);
+}
+.speaker-box:after{
+    background: #d4d4d4;
+}
+.speaker-box .pic{
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+.speaker-box .pic:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: scale(1.2);
+    transition: all 0.3s linear 0s;
+}
+.speaker-col:hover .pic:before{
+    opacity: 1;
+    transform: scale(0.9);
+}
+.speaker-box img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+.speaker-box .social{
+    width: 100%;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    opacity: 0;
+    transform: scale(1.2);
+    transition: all 0.3s linear 0s;
+}
+.speaker-col:hover .social{
+    opacity: 1;
+    transform: scale(1);
+}
+.speaker-box .social li{
+    display: inline-block;
+}
+.speaker-box .social li a{
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 25px;
+    color: #ffffff;
+    transition: all 0.3s linear 0s;
+}
+.speaker-box .social li a:hover{
+    color: #F32D3A;
+}
+.speaker-box .team-content{
+    padding-bottom: 35px;
+}
+.speaker-box .title{
+    font-size: 22px;
+    font-weight: bold;
+    color: #2a2b2f;
+    text-transform: capitalize;
+    margin: 15px 0 10px 0;
+}
+.speaker-box .post{
+    font-size: 18px;
+    color: #696969;
+    text-transform: capitalize;
+}
+.speaker-info {
+    text-align: center;
+    background: #111111;
+    padding: 15px 10px;
+    margin-top: 30px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px; 
+}
+.speaker-info h4 {
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+.speaker-info span {
+    text-transform: capitalize;
+    color: #999999;
+    font-size: 13px;
+}
+
+
+
+/*--------------------------------
+    07. Organizer CSS Start
+----------------------------------*/
+.organizer-area {
+    padding: 150px 0 100px;
+    position: relative;
+    overflow: hidden;
+}
+.organizer-col {
+    margin-bottom: 50px;
+}
+.organizer-col h3 {
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.organizer-col h2 {
+    color: #F32D3A;
+    font-size: 90px;
+    margin-bottom: 20px;
+}
+.organizer-col p {
+    font-size: 18px;
+    font-style: italic;
+}
+.organizer-col p i {
+    color: #F32D3A;
+    margin-right: 10px;
+}
+
+
+/*--------------------------------
+    08. Ticket CSS Start
+----------------------------------*/
+.ticket-area {
+    padding: 150px 0 100px;
+    background: url(../images/bg/3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+.ticket-area:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/bg/pattern.png);
+    background-repeat: repeat;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.ticket-col {
+    margin-bottom: 50px;
+}
+.ticket-col p {
+    color: #ffffff;
+}
+.ticket-col h2 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+.ticket-col h3 {
+    color: #fff;
+    padding: 10px;
+    background: #F32D3A;
+    display: inline-block;
+}
+.ticket-col h3 sub {
+    text-transform: lowercase;
+}
+.ticket-area .form-control {
+    background: rgba(255, 255, 255, 0.6);
+    color: #111111;
+}
+.my-select {
+    width: 100%;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.6);
+    color: #111111;
+}
+
+
+
+/*--------------------------------
+    09. Schedule CSS Start
+----------------------------------*/
+.schedule-area {
+    padding: 150px 0;
+    position: relative;
+}
+.schedule-table thead {
+    background: #F32D3A;
+    color: #ffffff;
+}
+.schedule-table thead tr th {
+    padding: 12px;
+    text-transform: capitalize;
+}
+.schedule-table tbody tr td {
+    padding: 12px;
+    text-transform: capitalize;
+}
+.table-row-bg {
+    background: #f2f2f2;
+}
+
+
+/*--------------------------------
+    10. Venue CSS Start
+----------------------------------*/
+.venue-area {
+    padding: 100px 0 50px;
+    background: #f3f3f3;
+}
+.venue-col {
+    margin-bottom: 50px;
+}
+.venue-col img {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+.venue-col .info-box {
+    background: #ffffff;
+    padding: 20px 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+.venue-col .info-box i:before {
+    font-size: 30px;
+}
+.venue-col .info-box p {
+    margin-top: 10px;
+}
+.venue-col .info-box h4 {
+    margin-bottom: 20px;
+}
+.venue-col .info-box ul li {
+    display: inline-block;
+}
+.venue-col .info-box ul li a i {
+    color: #F32D3A;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before {
+    margin-left: 0;
+}
+
+
+
+/*--------------------------------
+    11. Blog CSS Start
+----------------------------------*/
+.blog-area {
+    padding: 150px 0 100px;
+    position: relative;
+}
+.blog-col {
+    text-align: center;
+    margin-bottom: 30px;
+    background: #f3f3f3;
+}
+.blog-col .blog-img {
+    position: relative;
+}
+.blog-col .blog-img img {
+    
+}
+.blog-date {
+    width: 60%;
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    z-index: 0;
+    margin-left: -30%;
+
+}
+.blog-date h3 {
+    font-size: 16px;
+    background: #F32D3A;
+    padding: 10px 20px;
+    color: #ffffff;
+    text-transform: capitalize;
+    border-radius: 30px;
+}
+.blog-col h4 {
+    margin-top: 40px;
+}
+.blog-col h4 a {
+    color: #111111;
+}
+.blog-col h4 a:hover {
+    color: #F32D3A;
+}
+.blog-col p {
+    margin-bottom: 20px;
+}
+.blog-content {
+    padding: 0 15px 30px 15px;
+}
+.col-center {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/*--------------------------------
+    12. counter CSS Start
+----------------------------------*/
+.counter-area {
+    padding: 70px 0 50px;
+    background: url(../images/bg/1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.counter-area:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/bg/pattern.png);
+    background-repeat: repeat;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.counter-col {
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    background: rgba(153, 153, 153, 0.6);
+    border-radius: 10px;
+}
+.counter-col .count {
+    font-size: 28px;
+    line-height: 80px;
+    color: #ffffff;
+    background: rgba(243, 45, 58, 0.4);
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+.counter img {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    z-index: 0;
+    width: 60px;
+    opacity: 0.4;
+}
+.counter-col p {
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+
+/*--------------------------------
+    13. Sponsor CSS Start
+----------------------------------*/
+.sponsor-area {
+    padding: 150px 0 120px;
+    position: relative;
+}
+.sponsor-col {
+    margin-bottom: 30px;
+}
+.sponsor-col a {
+    display: block;
+    text-align: center;
+}
+.sponsor-col a img {
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+/*--------------------------------
+    14. Contact CSS Start
+----------------------------------*/
+.contact-area {
+    padding: 150px 0 150px;
+    position: relative;
+}
+.contact-col {
+    margin-bottom: 30px;
+    text-align: center;
+}
+.contact-infobox {
+    padding: 50px 30px;
+    background: #f3f3f3;
+    border-radius: 10px;
+}
+.contact-infobox i {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #F32D3A;
+    color: #F32D3A;
+    text-align: center;
+    font-size: 24px;
+    line-height: 45px;
+    margin-bottom: 20px;
+    padding: 5px 15px;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; 
+}
+.contact-infobox:hover i {
+    background: #F32D3A;
+    color: #ffffff;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; 
+}
+.contact-form-row .contact-col {
+    margin-bottom: 0;
+}
+.contact-form-row .contact-col .form-control {
+    height: 50px;
+    border-radius: 30px;
+}
+.contact-textarea textarea {
+    height: 100% !important;
+}
+.contact-col .form-control{
+    padding:20px 25px;
+}
+
+
+
+/*--------------------------------
+    15. Footer CSS Start
+----------------------------------*/
+.footer-area {
+    padding: 80px 0;
+    background: #353E4A;
+}
+.newsletter-col {
+    text-align: center;
+}
+.newsletter-col h4 {
+    color: #dadada;
+    margin-bottom: 30px;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+.newsletter-col form {
+    margin-bottom: 50px;
+}
+.newsletter-col form .form-control {
+    background: rgba(16, 16, 16, 0.20);
+    border-color: #636363;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    color: #f3f3f3;
+}
+.newsletter-col form .btn {
+    height: 45px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    background: #F32D3A;
+    color: #ffffff;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.newsletter-col form .btn:hover {
+    background: #000000;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.newsletter-col form .btn {
+    font-size: 16px;
+}
+.footer-col a i {
+    line-height: 35px;
+}
+.hi-icon-effect-4 .hi-icon {
+    width: 35px;
+    height: 35px;
+    box-shadow: none;
+    margin: 0 10px;
+}
+.hi-icon-effect-4b .hi-icon:hover {
+    box-shadow: none;
+}
+.hi-icon-wrap {
+    padding: 0;
+}
+.hi-icon {
+    font-size: 16px;
+    margin: 0;
+}
+.hi-icon-effect-4 .hi-icon:after {
+    top: -2px;
+    left: -2px;
+    padding: 0;
+    z-index: 10;
+    border: 2px dashed #ffffff;
+}
+
+.footer-copy-right {
+    padding: 20px 0;
+    background: #2D353E;
+}
+.footer-copy-right p {
+    color: #a0a0a0;
+}
+.footer-copy-right p a {
+    color: #F32D3A;
+}
+
+
+
+/*--------------------------------
+    16. Demo Page CSS Start
+----------------------------------*/
+.demo-page-header {
+    padding: 200px 0;
+    background: #111111;
+    background-image: url(../images/screenshot/1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.demo-page-features {
+    padding: 100px 0 100px;
+    background: #f5f5f5;
+}
+.demo-page-features h3 {
+    margin-bottom: 0;
+}
+.demo-page-features h2 {
+    font-size: 45px;
+    display: inline-block;
+    border-bottom: 3px solid #F32D3A;
+    margin-bottom: 60px;
+    line-height: 1;
+    padding-bottom: 10px;
+}
+.demo-page-features-col {
+    margin-bottom: 30px;
+    text-align: center;
+}
+.demo-page-features-col h4 {
+    font-size: 18px;
+    padding: 20px 20px;
+    background: #e4e4e4; 
+    border-top: 2px solid #F32D3A;
+}
+.demo-content-area {
+    padding: 100px 0 100px;
+}
+.demo-content-col {
+    margin-bottom: 50px;
+    text-align: center;
+}
+.demo-content-col h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #111111;
+}
+.demo-content-col h2 a {
+    color: #111111;
+}
+.header-content {
+    text-align: center;
+}
+.header-content h1 {
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+.header-content h1 span {
+    color: #F32D3A;
+    font-size: 40px;
+}
+.header-content .btn {
+    font-style: 16px;
+    background: #F32D3A;
+    border: none;
+    padding: 18px 40px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.demo-content-area {
+    padding: 150px 0 100px;
+}
+.demo-content-col {
+    margin-bottom: 50px;
+    text-align: center;
+}
+.demo-content-col h4 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #111111;
+    text-transform: capitalize;
+}
+.demo-content-col h4 a {
+    color: #111111;
+}
+.demo-content-col ul li {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.demo-content-col ul li a {
+    font-weight: bold;
+    color: #777777;
+    text-transform: uppercase;
+}
+.pages-col {
+    text-align: center;
+}
+.pages-col h1 {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed #cccccc;
+}
+.demo-img {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+.overlayer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.demo-img:hover .overlayer {
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.demo-img .overlayer a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 124px;
+    margin-left: -62px;
+    margin-top: -15px;
+    text-align: center;
+    color: #ffffff;
+    padding: 8px 20px;
+    border: 1px solid #ffffff;
+    display: inline-block;
+}
