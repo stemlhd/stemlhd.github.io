@@ -1,0 +1,174 @@
+/* Maps */
+/* Mixins */
+/* General */
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: Lato, sans-serif;
+  font-size: 1.6rem;
+  padding: 0;
+  margin: 0;
+  line-height: 2.4rem;
+}
+
+a,
+a.active,
+a:focus,
+a:hover {
+  text-decoration: none;
+  outline: 0;
+}
+
+.btn:active,
+.btn:focus,
+a,
+button:active,
+button:focus,
+input[type=submit]:active,
+input[type=submit]:focus,
+input[type=button]:active,
+input[type=button]:focus {
+  outline: 0;
+}
+
+body {
+  color: #1E1E28;
+}
+
+body #bg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: auto;
+}
+
+body #bg img {
+  width: auto;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  font-family: Lato, sans-serif;
+}
+
+nav .brand-img {
+  width: 100px;
+}
+
+nav .register-btn {
+  padding: 10px 26px;
+  background: #FFD400;
+  -webkit-box-shadow: 0px 0px 8px 1px #ccaa00;
+          box-shadow: 0px 0px 8px 1px #ccaa00;
+  color: #004176;
+}
+
+section#banner {
+  height: calc(100vh - 81px);
+}
+
+section#banner .title,
+section#banner .subtitle,
+section#banner .date {
+  line-height: 1.5em;
+  font-family: Oswald, sans-serif;
+}
+
+section#banner .subtitle {
+  margin-top: 100px;
+  font-size: 5.2em;
+  color: #43AAFF;
+  font-weight: 300;
+  margin: 0;
+}
+
+section#banner .title {
+  font-size: 6em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+section#banner .date {
+  font-size: 2em;
+  line-height: 6.3em;
+  line-height: 2.6rem;
+  font-weight: 300;
+  opacity: .8;
+}
+
+section#banner .cta-btn {
+  margin-left: 16px;
+  color: #1a1500;
+  padding: 12px 16px;
+  background-color: #FFD400;
+}
+
+section#banner .sec-btn {
+  margin-left: 30px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: 3px solid #1E1E28;
+  color: #1E1E28;
+}
+
+section#banner #countdown {
+  position: absolute;
+  bottom: 1em;
+  right: 2.8em;
+}
+
+section#banner #countdown span {
+  text-align: center;
+  font-family: Oswald, sans-serif;
+  font-size: 3em;
+  font-weight: 900;
+  display: inline-block;
+  margin-bottom: 0;
+  margin-right: 3.8rem;
+  letter-spacing: .16rem;
+  position: relative;
+}
+
+section#banner #countdown span:last-child {
+  margin-right: 0;
+}
+
+section#banner #countdown i {
+  font-family: Lato, sans-serif;
+  font-size: 0.35em;
+  line-height: 3rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: normal;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  font-style: normal;
+  display: inline-block;
+  position: absolute;
+  bottom: 0.7em;
+  right: -2em;
+}
+
+section#banner #countdown .days {
+  color: #FFD400;
+}
+
+section#banner #countdown .hrs {
+  color: #DA1E1E;
+}
+
+section#banner #countdown .mins {
+  color: #43AAFF;
+}
+
+section#banner #countdown .secs {
+  color: #fff;
+}
+/*# sourceMappingURL=main.css.map */

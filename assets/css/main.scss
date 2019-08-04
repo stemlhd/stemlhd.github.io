@@ -1,0 +1,207 @@
+ /* Maps */
+ $main-colors: (app-red: #DA1E1E,
+     app-red-dark: darken(#DA1E1E, 45%),
+     app-red-light: lighten(#DA1E1E, 45%),
+     app-blue: #43AAFF,
+     app-blue-light: lighten(#43AAFF, 45%),
+     app-blue-dark: darken(#43AAFF, 45%),
+     app-yellow: #FFD400,
+     app-yellow-light: lighten(#FFD400, 45%),
+     app-yellow-dark: darken(#FFD400, 45%),
+     app-black: #1E1E28,
+     app-black-light: lighten(#1E1E28, 45%),
+     app-black-dark: darken(#1E1E28, 45%),
+ );
+
+ @function main-color($key) {
+     @return map-get($map: $main-colors, $key: $key);
+ }
+
+ /* Mixins */
+ $desktop: 840px;
+
+ @mixin desktop {
+     @media (min-width: #{$desktop}) {
+         @content;
+     }
+ }
+
+
+ /* General */
+ body,
+ html {
+     height: 100%;
+ }
+
+ body {
+     font-family: Lato, sans-serif;
+     font-size: 1.6rem;
+     padding: 0;
+     margin: 0;
+     line-height: 2.4rem;
+ }
+
+ a,
+ a.active,
+ a:focus,
+ a:hover {
+     text-decoration: none;
+     outline: 0
+ }
+
+ .btn:active,
+ .btn:focus,
+ a,
+ button:active,
+ button:focus,
+ input[type=submit]:active,
+ input[type=submit]:focus,
+ input[type=button]:active,
+ input[type=button]:focus {
+     outline: 0
+ }
+
+ body {
+     color: main-color(app-black);
+
+     #bg {
+         position: absolute;
+         z-index: -1;
+         top: 0;
+         right: 0;
+         height: 100%;
+         width: auto;
+
+         img {
+             width: auto;
+             height: 100%;
+             background-repeat: no-repeat;
+
+         }
+
+     }
+ }
+
+
+ .navbar {
+     font-family: Lato, sans-serif;
+ }
+
+ nav {
+     .brand-img {
+         width: 100px;
+     }
+
+     .register-btn {
+         padding: 10px 26px;
+         background: main-color(app-yellow);
+         box-shadow: 0px 0px 8px 1px darken(main-color(app-yellow), 10%);
+         color: darken(main-color(app-blue), 40%);
+     }
+ }
+
+ section#banner {
+     height: calc(100vh - 81px);
+
+     .title,
+     .subtitle,
+     .date {
+         line-height: 1.5em;
+         font-family: Oswald, sans-serif;
+     }
+
+     .subtitle {
+         margin-top: 100px;
+         font-size: 5.2em;
+         color: main-color(app-blue);
+         font-weight: 300;
+         margin: 0;
+     }
+
+     .title {
+         font-size: 6em;
+         font-weight: 900;
+         text-transform: uppercase;
+     }
+
+     .date {
+         font-size: 2em;
+         line-height: 6.3em;
+         line-height: 2.6rem;
+
+         font-weight: 300;
+         opacity: .8
+     }
+
+     .cta-btn {
+         margin-left: 16px;
+         color: main-color(app-yellow-dark);
+         padding: 12px 16px;
+         background-color: main-color(app-yellow);
+     }
+
+     .sec-btn {
+         margin-left: 30px;
+         padding-top: 8px;
+         padding-bottom: 8px;
+         border: 3px solid main-color(app-black);
+         color: main-color(app-black)
+     }
+
+
+     #countdown {
+         position: absolute;
+         bottom: 1em;
+         right: 2.8em;
+
+         span {
+             text-align: center;
+             font-family: Oswald, sans-serif;
+             font-size: 3em;
+             //  line-height: 10.2rem;
+             font-weight: 900;
+             display: inline-block;
+             margin-bottom: 0;
+             margin-right: 3.8rem;
+             letter-spacing: .16rem;
+             position: relative;
+
+             &:last-child {
+                 margin-right: 0;
+             }
+         }
+
+         i {
+             font-family: Lato, sans-serif;
+             font-size: 0.35em;
+             line-height: 3rem;
+             color: #fff;
+             text-transform: uppercase;
+             font-weight: 300;
+             letter-spacing: normal;
+             transform: rotate(-90deg);
+             font-style: normal;
+             display: inline-block;
+             position: absolute;
+             bottom: 0.7em;
+             right: -2em;
+         }
+
+         .days {
+             color: main-color(app-yellow)
+         }
+
+         .hrs {
+             color: main-color(app-red)
+         }
+
+         .mins {
+             color: main-color(app-blue)
+         }
+
+         .secs {
+             color: #fff
+         }
+
+     }
+ }
