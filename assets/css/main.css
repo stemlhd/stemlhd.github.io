@@ -31,11 +31,12 @@ input[type=submit]:active,
 input[type=submit]:focus,
 input[type=button]:active,
 input[type=button]:focus {
-  outline: 0;
+  outline: 0 !important;
 }
 
 body {
   color: #1E1E28;
+  max-height: 57.5%;
 }
 
 body #bg {
@@ -44,13 +45,39 @@ body #bg {
   top: 0;
   right: 0;
   height: 100%;
-  width: auto;
+  max-width: 57vw;
 }
 
 body #bg img {
   width: auto;
   height: 100%;
-  background-repeat: no-repeat;
+}
+
+body #bg-mobile {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  max-height: 30%;
+}
+
+body #bg-mobile img {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 840px) {
+  .hide-desktop {
+    display: none;
+  }
+}
+
+@media (max-width: 840px) {
+  .hide-mobile {
+    display: none;
+  }
 }
 
 .navbar {
@@ -69,8 +96,28 @@ nav .register-btn {
   color: #004176;
 }
 
+@media (max-width: 840px) {
+  nav .register-btn {
+    margin-right: 10px;
+  }
+}
+
 section#banner {
-  height: calc(100vh - 81px);
+  height: calc(100% - 81px);
+  margin-bottom: 45vh;
+}
+
+@media (max-width: 840px) {
+  section#banner {
+    height: calc(100% - 64.5px);
+  }
+}
+
+@media (min-width: 840px) {
+  section#banner {
+    margin-top: 18vh;
+    margin-bottom: 27vh;
+  }
 }
 
 section#banner .title,
@@ -81,11 +128,16 @@ section#banner .date {
 }
 
 section#banner .subtitle {
-  margin-top: 100px;
+  margin: 16px 0 0 0;
   font-size: 5.2em;
   color: #43AAFF;
   font-weight: 300;
-  margin: 0;
+}
+
+@media (max-width: 840px) {
+  section#banner .subtitle {
+    font-size: 2.8em;
+  }
 }
 
 section#banner .title {
@@ -94,39 +146,76 @@ section#banner .title {
   text-transform: uppercase;
 }
 
+@media (max-width: 840px) {
+  section#banner .title {
+    font-size: 3.0em;
+  }
+}
+
 section#banner .date {
   font-size: 2em;
-  line-height: 6.3em;
   line-height: 2.6rem;
   font-weight: 300;
   opacity: .8;
 }
 
+@media (max-width: 840px) {
+  section#banner .date {
+    font-size: 1.2em;
+    line-height: 1.3em;
+  }
+}
+
 section#banner .cta-btn {
-  margin-left: 16px;
   color: #1a1500;
-  padding: 12px 16px;
+  padding: 16px 20px;
   background-color: #FFD400;
 }
 
+@media (max-width: 840px) {
+  section#banner .cta-btn {
+    margin: 8px auto 12px;
+  }
+}
+
 section#banner .sec-btn {
-  margin-left: 30px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  border: 3px solid #1E1E28;
+  margin-left: 16px;
+  padding: 12px 16px;
+  border: 4px solid #1E1E28;
   color: #1E1E28;
+}
+
+@media (max-width: 840px) {
+  section#banner .sec-btn {
+    margin: auto;
+  }
 }
 
 section#banner #countdown {
   position: absolute;
   bottom: 1em;
-  right: 2.8em;
+}
+
+@media (min-width: 840px) {
+  section#banner #countdown {
+    bottom: 0.8em;
+    right: 2.8em;
+  }
+}
+
+@media (max-width: 840px) {
+  section#banner #countdown {
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+  }
 }
 
 section#banner #countdown span {
   text-align: center;
   font-family: Oswald, sans-serif;
-  font-size: 3em;
+  font-size: 3.55vw;
   font-weight: 900;
   display: inline-block;
   margin-bottom: 0;
@@ -137,6 +226,12 @@ section#banner #countdown span {
 
 section#banner #countdown span:last-child {
   margin-right: 0;
+}
+
+@media (max-width: 840px) {
+  section#banner #countdown span {
+    font-size: 2em;
+  }
 }
 
 section#banner #countdown i {
@@ -154,6 +249,12 @@ section#banner #countdown i {
   position: absolute;
   bottom: 0.7em;
   right: -2em;
+}
+
+@media (max-width: 840px) {
+  section#banner #countdown i {
+    bottom: 0;
+  }
 }
 
 section#banner #countdown .days {

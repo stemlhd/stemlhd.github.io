@@ -66,42 +66,82 @@
 </head>
 
 <body>
-  <div id="bg"><img src="assets/img/component.svg" alt="background"></div>
+  <div id="bg" class="hide-mobile">
+    <img src="assets/img/component.svg" alt="background">
+  </div>
+  <div id="bg-mobile" class="hide-desktop">
+    <img src="assets/img/component-mobile.svg" alt="background" class="bg">
+  </div>
 
 
-  <nav class="navbar navbar-expand-lg navbar-light">
+
+  <nav class="navbar navbar-expand-md navbar-light justify-content-end">
     <div class="container">
       <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="STEM LHD" class="brand-img"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
+      </button> -->
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
+      <div class="d-flex flex-row order-2 order-md-3">
+        <button class="btn register-btn">Ticket</button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse order-3 order-md-2" id="navbarSupportedContent">
+        <ul class="navbar-nav">
           <li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Speakers</a></li>
           <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Speakers</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Sponsors</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Gallery</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
         </ul>
-
-        <button class="btn register-btn ml-auto mr-1">Ticket</button>
       </div>
     </div>
   </nav>
 
-  <section class="container" id="banner">
-    <h3 class="subtitle">Local Hack Day On</h3>
-    <h2 class="title"><span id="typed-string">Learning</span></h2>
-    <p class="date">01 December 2019, STEM 6th of October</p>
+  <section id="banner">
+    <div class="container">
+      <h3 class="subtitle">Local Hack Day On</h3>
+      <h2 class="title"><span id="typed-string">Learning</span></h2>
+      <p class="date">01 December 2019, STEM 6th of October</p>
 
-    <div class="row">
       <a class="btn col-ms-4 col-md-2 cta-btn scroll" href="#registration">Register Now</a>
       <a class="btn col-ms-4 col-md-2 sec-btn scroll" href="#about">Learn More</a>
-    </div>
 
-    <div id="countdown" data-date="2019/12/01"></div>
+      <div id="countdown" data-date="2019/12/01"></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-7">
+          <div class="about-content-area">
+            <h2 class="heading">STEM Local Hack Day</h2>
+            <h3 class="subheading">Why STEM Local Hack Day?</h3>
+            <div class="csi-about-content">
+              <p class="text">
+                Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+                tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
+                ultricies mi vitae est. Mauris Eonec eu ribero sit amet quam egestas semper.
+                Aenean are ultricies mi vitae est tristique senectus et netus et malesuada
+                placerat eleifend leo.
+              </p>
+              <div class="btn-area">
+                <a class="csi-btn csi-btn-brand" href="about.html">More About</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-5"><img src="assets/img/logo-full.png" alt="STEM LHD" class="about-img"></div>
+
+      </div>
+    </div>
   </section>
 
   <script src="assets/js/vendor/jquery-3.3.1.slim.min.js"></script>

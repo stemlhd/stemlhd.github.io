@@ -20,6 +20,12 @@
  /* Mixins */
  $desktop: 840px;
 
+ @mixin mobile {
+     @media (max-width: #{$desktop}) {
+         @content;
+     }
+ }
+
  @mixin desktop {
      @media (min-width: #{$desktop}) {
          @content;
@@ -58,11 +64,13 @@
  input[type=submit]:focus,
  input[type=button]:active,
  input[type=button]:focus {
-     outline: 0
+     outline: 0 !important
  }
+
 
  body {
      color: main-color(app-black);
+     max-height: 57.5%;
 
      #bg {
          position: absolute;
@@ -70,15 +78,39 @@
          top: 0;
          right: 0;
          height: 100%;
-         width: auto;
+         max-width: 57vw;
 
          img {
              width: auto;
              height: 100%;
-             background-repeat: no-repeat;
-
          }
+     }
 
+     #bg-mobile {
+         position: absolute;
+         z-index: 1;
+         bottom: 0;
+         right: 0;
+         left: 0;
+         width: 100%;
+         max-height: 30%;
+
+         img {
+             width: 100%;
+             height: auto;
+         }
+     }
+ }
+
+ .hide-desktop {
+     @include desktop {
+         display: none;
+     }
+ }
+
+ .hide-mobile {
+     @include mobile {
+         display: none;
      }
  }
 
@@ -97,11 +129,26 @@
          background: main-color(app-yellow);
          box-shadow: 0px 0px 8px 1px darken(main-color(app-yellow), 10%);
          color: darken(main-color(app-blue), 40%);
+
+         @include mobile {
+             margin-right: 10px;
+         }
      }
  }
 
  section#banner {
-     height: calc(100vh - 81px);
+     height: calc(100% - 81px);
+
+     @include mobile {
+         height: calc(100% - 64.5px);
+     }
+
+     margin-bottom: 45vh;
+
+     @include desktop {
+         margin-top: 18vh;
+         margin-bottom: 27vh;
+     }
 
      .title,
      .subtitle,
@@ -111,53 +158,82 @@
      }
 
      .subtitle {
-         margin-top: 100px;
+         margin: 16px 0 0 0;
          font-size: 5.2em;
          color: main-color(app-blue);
          font-weight: 300;
-         margin: 0;
+
+         @include mobile {
+             font-size: 2.8em;
+         }
      }
 
      .title {
          font-size: 6em;
          font-weight: 900;
          text-transform: uppercase;
+
+         @include mobile {
+             font-size: 3.0em;
+         }
      }
 
      .date {
          font-size: 2em;
-         line-height: 6.3em;
          line-height: 2.6rem;
 
          font-weight: 300;
-         opacity: .8
+         opacity: .8;
+
+         @include mobile {
+             font-size: 1.2em;
+             line-height: 1.3em;
+         }
      }
 
      .cta-btn {
-         margin-left: 16px;
+         //  margin-left: 16px;
          color: main-color(app-yellow-dark);
-         padding: 12px 16px;
+         padding: 16px 20px;
          background-color: main-color(app-yellow);
+
+         @include mobile {
+             margin: 8px auto 12px;
+         }
      }
 
      .sec-btn {
-         margin-left: 30px;
-         padding-top: 8px;
-         padding-bottom: 8px;
-         border: 3px solid main-color(app-black);
-         color: main-color(app-black)
+         margin-left: 16px;
+         padding: 12px 16px;
+         border: 4px solid main-color(app-black);
+         color: main-color(app-black);
+
+         @include mobile {
+             margin: auto;
+         }
      }
 
 
      #countdown {
          position: absolute;
          bottom: 1em;
-         right: 2.8em;
+
+         @include desktop {
+             bottom: 0.8em;
+             right: 2.8em;
+         }
+
+         @include mobile {
+             left: 0;
+             right: 0;
+             text-align: center;
+             z-index: 1;
+         }
 
          span {
              text-align: center;
              font-family: Oswald, sans-serif;
-             font-size: 3em;
+             font-size: 3.55vw;
              //  line-height: 10.2rem;
              font-weight: 900;
              display: inline-block;
@@ -168,6 +244,10 @@
 
              &:last-child {
                  margin-right: 0;
+             }
+
+             @include mobile {
+                 font-size: 2em
              }
          }
 
@@ -185,6 +265,10 @@
              position: absolute;
              bottom: 0.7em;
              right: -2em;
+
+             @include mobile {
+                 bottom: 0;
+             }
          }
 
          .days {
@@ -204,4 +288,9 @@
          }
 
      }
+ }
+
+ section#about {
+     //      position: absolute;
+     //      bottom: -100%;
  }
