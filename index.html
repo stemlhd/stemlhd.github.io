@@ -61,8 +61,7 @@
   <link rel="stylesheet" href="assets/css/main.css">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -75,16 +74,12 @@
 
 
 
-  <nav class="navbar navbar-expand-md navbar-light justify-content-end">
+  <nav class="navbar navbar-expand-md navbar-light navbar-fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="STEM LHD" class="brand-img"></a>
-      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button> -->
 
       <div class="d-flex flex-row order-2 order-md-3">
-        <button class="btn register-btn">Ticket</button>
+        <button class="btn register-btn">Attend</button>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -93,7 +88,7 @@
       <div class="collapse navbar-collapse order-3 order-md-2" id="navbarSupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Speakers</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Sponsors</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Gallery</a></li>
@@ -109,8 +104,8 @@
       <h2 class="title"><span id="typed-string">Learning</span></h2>
       <p class="date">01 December 2019, STEM 6th of October</p>
 
-      <a class="btn col-ms-4 col-md-2 cta-btn scroll" href="#registration">Register Now</a>
-      <a class="btn col-ms-4 col-md-2 sec-btn scroll" href="#about">Learn More</a>
+      <a class="btn col-ms-4 col-lg-2 cta-btn" href="#registration">Register Now</a>
+      <a class="btn col-ms-4 col-lg-2 sec-btn" href="#about">Learn More</a>
 
       <div id="countdown" data-date="2019/12/01"></div>
     </div>
@@ -119,26 +114,23 @@
   <section id="about">
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 col-md-7">
+        <div class="col-sm-12 col-md-7 order-2 ordre-md-1">
           <div class="about-content-area">
             <h2 class="heading">STEM Local Hack Day</h2>
             <h3 class="subheading">Why STEM Local Hack Day?</h3>
-            <div class="csi-about-content">
+            <div class="about-content">
               <p class="text">
-                Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-                ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
-                tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-                ultricies mi vitae est. Mauris Eonec eu ribero sit amet quam egestas semper.
-                Aenean are ultricies mi vitae est tristique senectus et netus et malesuada
-                placerat eleifend leo.
+                Local Hack Day is a 12-hour Hackathon where you can share your ideas and thoughts with like-minded
+                people and be rewarded for it. Competitions, sessions with experts, collaborative experience in
+                handiwork and many tech wonders are all there for you to see and relish. It is be a delightful
+                experience full of hi-tech robots and interesting sessions. Don’t miss the chance!
               </p>
-              <div class="btn-area">
-                <a class="csi-btn csi-btn-brand" href="about.html">More About</a>
-              </div>
+              <a class="btn sec-btn" href="views/about.html">More About</a>
             </div>
           </div>
         </div>
-        <div class="col-sm-12 col-md-5"><img src="assets/img/logo-full.png" alt="STEM LHD" class="about-img"></div>
+        <div class="col-sm-12 col-md-5 about-img order-1 order-md-2"><img src="assets/img/logo-full.png" alt="STEM LHD">
+        </div>
 
       </div>
     </div>
