@@ -1,0 +1,20 @@
+@import "side_pages";
+
+section#content {
+    font-family: $body-font;
+
+    .title,
+    .subtitle {
+        font-family: $heading-font;
+    }
+
+    .title {
+        font-size: 2em;
+        color: main-color(app-black);
+    }
+
+    .subtitle {
+        font-size: 1.2em;
+        color: main-color(app-blue-dark)
+    }
+}

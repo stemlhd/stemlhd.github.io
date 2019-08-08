@@ -1,0 +1,283 @@
+/* Maps */
+$main-colors: (app-red: #DA1E1E,
+    app-red-dark: darken(#DA1E1E, 45%),
+    app-red-light: lighten(#DA1E1E, 45%),
+    app-blue: #43AAFF,
+    app-blue-light: lighten(#43AAFF, 45%),
+    app-blue-dark: darken(#43AAFF, 45%),
+    app-yellow: #FFD400,
+    app-yellow-light: lighten(#FFD400, 45%),
+    app-yellow-dark: darken(#FFD400, 45%),
+    app-black: #1E1E28,
+    app-black-light: lighten(#1E1E28, 45%),
+    app-black-dark: darken(#1E1E28, 45%),
+);
+
+@function main-color($key) {
+    @return map-get($map: $main-colors, $key: $key);
+}
+
+// Variables
+$heading-font: Oswald,
+sans-serif;
+$body-font: Lato,
+sans-serif;
+
+@mixin sm {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+
+@mixin not-sm {
+    @media (min-width: 577px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: 577px) and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin up-md {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin not-md {
+    @media (min-width: 769px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: 769px) and (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin up-lg {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin not-lg {
+    @media (min-width: 769px) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (min-width: 993px) and (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin up-xl {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin not-xl {
+    @media (min-width: 1201px) {
+        @content;
+    }
+}
+
+
+/* General */
+body,
+html {
+    height: 100%;
+}
+
+body {
+    font-family: $body-font;
+    font-size: 1.6rem;
+    padding: 0;
+    margin: 0;
+    line-height: 2.4rem;
+}
+
+a,
+a.active,
+a:focus,
+a:hover {
+    text-decoration: none;
+    outline: 0
+}
+
+.btn:active,
+.btn:focus,
+a,
+button:active,
+button:focus,
+input[type=submit]:active,
+input[type=submit]:focus,
+input[type=button]:active,
+input[type=button]:focus {
+    outline: 0 !important
+}
+
+
+.hide-sm {
+    @include sm {
+        display: none;
+    }
+}
+
+.hide-md {
+    @include md {
+        display: none;
+    }
+}
+
+.hide-lg {
+    @include lg {
+        display: none;
+    }
+}
+
+
+.hide-xl {
+    @include xl {
+        display: none;
+    }
+}
+
+.hide-not-xl {
+    @include not-xl {
+        display: none;
+    }
+}
+
+
+.navbar {
+    font-family: $body-font;
+}
+
+.brand-img {
+    width: 100px;
+}
+
+
+nav .register-btn {
+    padding: 10px 26px;
+    background: main-color(app-yellow);
+    box-shadow: 0px 0px 8px 1px darken(main-color(app-yellow), 10%);
+
+    &:hover,
+    & {
+        color: main-color(app-yellow-dark);
+    }
+
+    @include up-md {
+        margin-right: 10px;
+    }
+}
+
+
+footer {
+    font-family: $body-font;
+    background-color: main-color(app-black);
+    margin-top: 7vh;
+    padding-top: 8vh;
+    color: #fff;
+
+    @include up-md {
+        font-size: 0.9em;
+    }
+
+    .footer-logo {
+        @include up-md {
+            text-align: center;
+        }
+
+        img {
+            width: 210px;
+        }
+    }
+
+    .footer-title {
+        font-family: $heading-font;
+        font-size: 1.5em;
+        text-transform: uppercase;
+
+        @include up-md {
+            font-size: 1.2em;
+        }
+    }
+
+    .date {
+        font-family: $heading-font;
+        color: main-color(app-yellow);
+        font-size: 0.9em;
+
+        @include up-md {
+            font-size: 0.8em;
+        }
+    }
+
+    .the-subscribe-area {
+        margin-top: 5vh;
+
+        .footer-advice {
+            font-size: 0.8em;
+        }
+
+        .btn-subscribe {
+            padding: 10px 26px;
+            background: main-color(app-yellow);
+            box-shadow: 0px 0px 8px 1px darken(main-color(app-yellow), 10%);
+
+            &:hover,
+            & {
+                color: main-color(app-yellow-dark);
+            }
+
+            @include up-md {
+                margin-right: 10px;
+            }
+        }
+
+        .success,
+        .failure,
+        .loading,
+        .already-exists {
+            display: none;
+            font-size: 0.9em;
+        }
+
+        .success {
+            color: green;
+        }
+
+        .failure {
+            color: main-color(app-red);
+        }
+
+        .loading,
+        .already-exists {
+            opacity: 0.8;
+        }
+
+        .shown {
+            display: block;
+        }
+    }
+
+    .copyright {
+        margin-top: 3vh
+    }
+
+    @include up-md {
+        .second {
+            margin-top: 6vh
+        }
+    }
+}

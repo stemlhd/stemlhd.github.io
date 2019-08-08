@@ -1,0 +1,47 @@
+@import "side_pages";
+
+section#stuff {
+    font-family: $body-font;
+
+    a.nav-link {
+        font-family: $heading-font;
+        font-size: 1.1em;
+        color: main-color(app-black);
+        opacity: 0.9;
+
+        @include not-md {
+            font-size: 1.3em;
+        }
+    }
+
+    a.nav-link.active {
+        background: main-color(app-black);
+        color: #fff;
+        opacity: 1;
+
+        &::before {
+            content: '';
+            left: -1.2em;
+            display: inline-block;
+            position: relative;
+            // padding: 16px;
+            width: 1em;
+            height: 1em;
+            background-color: main-color(app-yellow);
+            border: 2px solid main-color(app-yellow);
+            border-radius: 50%;
+        }
+    }
+
+    .text {
+        font-size: 1em;
+
+        @include not-md {
+            font-size: 1.12em;
+        }
+
+        @include up-md {
+            margin: 12px 16px;
+        }
+    }
+}

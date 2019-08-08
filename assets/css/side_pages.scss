@@ -1,0 +1,67 @@
+@import "_common";
+
+
+.jumbotron {
+    background: main-color(app-black) !important;
+}
+
+.navbar-bg {
+    z-index: -1;
+    background: main-color(app-black);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+
+    height: 100%;
+
+}
+
+.banner {
+    height: 40%;
+    overflow: hidden;
+    position: relative;
+
+
+    #bg-right,
+    #bg-left {
+        top: 0;
+        bottom: 0;
+        position: absolute;
+
+        img {
+            height: 40vh;
+        }
+    }
+
+    #bg-right {
+        right: 0;
+    }
+
+    #bg-left {
+        left: 0;
+    }
+
+    .heading,
+    .breadcrumb {
+        position: relative;
+    }
+
+    .heading {
+        font-family: $heading-font;
+        font-size: 3.5em;
+        color: #fff;
+    }
+
+    .breadcrumb {
+        background: 0 0;
+        padding: 0;
+        color: #fff;
+        font-size: 1.2em;
+
+        .active {
+            color: main-color(app-blue-light);
+            opacity: .8;
+        }
+    }
+}

@@ -1,71 +1,4 @@
- /* Maps */
- $main-colors: (app-red: #DA1E1E,
-     app-red-dark: darken(#DA1E1E, 45%),
-     app-red-light: lighten(#DA1E1E, 45%),
-     app-blue: #43AAFF,
-     app-blue-light: lighten(#43AAFF, 45%),
-     app-blue-dark: darken(#43AAFF, 45%),
-     app-yellow: #FFD400,
-     app-yellow-light: lighten(#FFD400, 45%),
-     app-yellow-dark: darken(#FFD400, 45%),
-     app-black: #1E1E28,
-     app-black-light: lighten(#1E1E28, 45%),
-     app-black-dark: darken(#1E1E28, 45%),
- );
-
- @function main-color($key) {
-     @return map-get($map: $main-colors, $key: $key);
- }
-
- /* Mixins */
- $desktop: 840px;
-
- @mixin mobile {
-     @media (max-width: #{$desktop}) {
-         @content;
-     }
- }
-
- @mixin desktop {
-     @media (min-width: #{$desktop}) {
-         @content;
-     }
- }
-
-
- /* General */
- body,
- html {
-     height: 100%;
- }
-
- body {
-     font-family: Lato, sans-serif;
-     font-size: 1.6rem;
-     padding: 0;
-     margin: 0;
-     line-height: 2.4rem;
- }
-
- a,
- a.active,
- a:focus,
- a:hover {
-     text-decoration: none;
-     outline: 0
- }
-
- .btn:active,
- .btn:focus,
- a,
- button:active,
- button:focus,
- input[type=submit]:active,
- input[type=submit]:focus,
- input[type=button]:active,
- input[type=button]:focus {
-     outline: 0 !important
- }
+ @import "_common";
 
  body {
      color: main-color(app-black);
@@ -88,135 +21,133 @@
      #bg-mobile {
          position: fixed;
          z-index: 1;
-         bottom: 0;
          right: 0;
          left: 0;
          width: 100%;
-         max-height: 30%;
+
+         animation-duration: 0.6s;
+         animation-delay: 0s;
 
          img {
              width: 100%;
              height: auto;
          }
-     }
- }
 
- .hide-desktop {
-     @include desktop {
-         display: none;
-     }
- }
-
- .hide-mobile {
-     @include mobile {
-         display: none;
-     }
- }
-
- .navbar {
-     font-family: Lato, sans-serif;
- }
-
- nav {
-     .brand-img {
-         width: 100px;
-     }
-
-     .register-btn {
-         padding: 10px 26px;
-         background: main-color(app-yellow);
-         box-shadow: 0px 0px 8px 1px darken(main-color(app-yellow), 10%);
-         color: darken(main-color(app-blue), 40%);
-
-         @include mobile {
-             margin-right: 10px;
+         @include sm {
+             bottom: 0;
          }
 
+         @include not-sm {
+             bottom: -3.8em;
+             overflow: hidden;
+         }
      }
  }
 
  section#banner {
      height: calc(100% - 81px);
 
-     @include mobile {
+     @include up-md {
          height: calc(100% - 64.5px);
      }
 
-     margin-bottom: 45vh;
+     margin-bottom: 27vh;
 
-     @include desktop {
+     @include not-md {
          margin-top: 18vh;
-         margin-bottom: 27vh;
      }
 
      .title,
      .subtitle,
      .date {
          line-height: 1.5em;
-         font-family: Oswald, sans-serif;
+         font-family: $heading-font;
      }
 
      .subtitle {
+         font-size: 2.8em;
          margin: 16px 0 0 0;
-         font-size: 5.2em;
          color: main-color(app-blue);
          font-weight: 300;
 
-         @include mobile {
-             font-size: 2.8em;
+         @include md {
+             font-size: 8vw;
          }
+
+         @include lg {
+             font-size: 8.5vw;
+         }
+
+         @include not-lg {
+             font-size: 5.2em
+         }
+
      }
 
      .title {
-         font-size: 6em;
+         font-size: 3em;
          font-weight: 900;
          text-transform: uppercase;
 
-         @include mobile {
-             font-size: 3.0em;
+         @include md {
+             font-size: 10vw;
+         }
+
+         @include lg {
+             font-size: 8vw;
+         }
+
+         @include not-lg {
+             font-size: 6em
          }
      }
 
      .date {
-         font-size: 2em;
-         line-height: 2.6rem;
-
+         font-size: 1.2em;
+         line-height: 1.3em;
          font-weight: 300;
          opacity: .8;
-
          margin-bottom: 18px;
 
-         @include mobile {
-             font-size: 1.2em;
-             line-height: 1.3em;
+         @include md {
+             font-size: 3.8vw;
+             line-height: 1vw;
+         }
+
+         @include lg {
+             font-size: 3.5vw;
+             line-height: 2.6rem;
+         }
+
+         @include not-lg {
+             font-size: 2.3em;
+             line-height: 2rem
          }
      }
 
      .cta-btn,
      .sec-btn {
          font-size: 1.1em;
-         font-family: Lato, sans-serif;
-
-         transition: all .05s ease-in-out;
+         font-family: $body-font;
+         transition: position .05s ease-in-out, box-shadow .05s ease-in-out;
 
          &:hover,
          &:focus {
-             position: relative;
              box-shadow: -3px 3px 0 1px;
              bottom: -3px;
              left: -3px;
-
+             position: relative;
          }
      }
 
      .cta-btn {
          color: main-color(app-yellow-dark);
-         padding: 12px 16px;
+         padding: 12px 1.8vw;
          border: 4px solid main-color(app-yellow-dark);
          background-color: main-color(app-yellow);
          box-shadow: -6px 6px 0px 1px main-color(app-yellow-dark);
 
-         @include mobile {
+         @include up-md {
              margin: 8px auto 12px;
          }
      }
@@ -229,7 +160,7 @@
          box-shadow: -6px 6px 0px 1px main-color(app-black);
 
 
-         @include mobile {
+         @include up-md {
              margin: auto;
          }
      }
@@ -237,13 +168,15 @@
 
      #countdown {
          position: absolute;
+         animation-duration: 0.6s;
+         animation-delay: 0s;
 
-         @include desktop {
+         @include not-md {
              bottom: 0.8em;
              right: 2.8em;
          }
 
-         @include mobile {
+         @include up-md {
              position: fixed;
              left: 0;
              right: 0;
@@ -254,9 +187,7 @@
 
          span {
              text-align: center;
-             font-family: Oswald, sans-serif;
-             font-size: 3.55vw;
-             //  line-height: 10.2rem;
+             font-family: $heading-font;
              font-weight: 900;
              display: inline-block;
              margin-bottom: 0;
@@ -268,13 +199,25 @@
                  margin-right: 0;
              }
 
-             @include mobile {
+             @include sm {
                  font-size: 10vw
+             }
+
+             @include md {
+                 font-size: 8vw;
+             }
+
+             @include lg {
+                 margin-right: 1.5rem
+             }
+
+             @include not-lg {
+                 font-size: 3.55vw;
              }
          }
 
          i {
-             font-family: Lato, sans-serif;
+             font-family: $body-font;
              font-size: 0.35em;
              line-height: 3rem;
              color: #fff;
@@ -288,7 +231,7 @@
              bottom: 0.7em;
              right: -2em;
 
-             @include mobile {
+             @include sm {
                  bottom: 0;
              }
          }
@@ -314,13 +257,13 @@
 
  section#about {
 
-     @include mobile {
-         margin-bottom: 300px;
+     @include up-lg {
+         margin-bottom: 80px;
      }
 
      .heading,
      .subheading {
-         font-family: Oswald, sans-serif
+         font-family: $heading-font
      }
 
      .heading {
@@ -345,7 +288,7 @@
 
      .about-content {
          text-align: center;
-         font-family: Lato, sans-serif;
+         font-family: $body-font;
 
          .text {
              line-height: 1.55em;
@@ -353,13 +296,12 @@
              opacity: .8;
          }
 
-         .sec-btn {
+         .about-btn {
              padding: 12px 16px;
              border: 2px solid main-color(app-blue-dark);
              color: main-color(app-blue-dark);
 
              box-shadow: -6px 6px 0px 1px main-color(app-blue-dark);
-
              transition: all .1s ease-in-out;
 
              &:hover,
@@ -377,11 +319,31 @@
          text-align: center;
 
          img {
-             @include mobile {
+             @include sm {
                  width: 100%;
              }
          }
      }
+ }
 
+ section#cause {
+     color: #fff;
+     font-family: $body-font;
+     background-color: main-color(app-black);
+     padding: 25px;
 
+     .single-item {
+         padding: 25px;
+
+         .icon-img {
+             top: -200px;
+             width: 200px;
+         }
+
+         .cause-title {
+             font-family: $heading-font;
+             font-size: 2.5em;
+         }
+
+     }
  }

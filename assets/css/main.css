@@ -1,5 +1,4 @@
 /* Maps */
-/* Mixins */
 /* General */
 body,
 html {
@@ -34,6 +33,169 @@ input[type=button]:focus {
   outline: 0 !important;
 }
 
+@media (max-width: 576px) {
+  .hide-sm {
+    display: none;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .hide-md {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .hide-lg {
+    display: none;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  .hide-xl {
+    display: none;
+  }
+}
+
+@media (min-width: 1201px) {
+  .hide-not-xl {
+    display: none;
+  }
+}
+
+.navbar {
+  font-family: Lato, sans-serif;
+}
+
+.brand-img {
+  width: 100px;
+}
+
+nav .register-btn {
+  padding: 10px 26px;
+  background: #FFD400;
+  -webkit-box-shadow: 0px 0px 8px 1px #ccaa00;
+          box-shadow: 0px 0px 8px 1px #ccaa00;
+}
+
+nav .register-btn:hover, nav .register-btn {
+  color: #1a1500;
+}
+
+@media (max-width: 768px) {
+  nav .register-btn {
+    margin-right: 10px;
+  }
+}
+
+footer {
+  font-family: Lato, sans-serif;
+  background-color: #1E1E28;
+  margin-top: 7vh;
+  padding-top: 8vh;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  footer {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 768px) {
+  footer .footer-logo {
+    text-align: center;
+  }
+}
+
+footer .footer-logo img {
+  width: 210px;
+}
+
+footer .footer-title {
+  font-family: Oswald, sans-serif;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  footer .footer-title {
+    font-size: 1.2em;
+  }
+}
+
+footer .date {
+  font-family: Oswald, sans-serif;
+  color: #FFD400;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  footer .date {
+    font-size: 0.8em;
+  }
+}
+
+footer .the-subscribe-area {
+  margin-top: 5vh;
+}
+
+footer .the-subscribe-area .footer-advice {
+  font-size: 0.8em;
+}
+
+footer .the-subscribe-area .btn-subscribe {
+  padding: 10px 26px;
+  background: #FFD400;
+  -webkit-box-shadow: 0px 0px 8px 1px #ccaa00;
+          box-shadow: 0px 0px 8px 1px #ccaa00;
+}
+
+footer .the-subscribe-area .btn-subscribe:hover, footer .the-subscribe-area .btn-subscribe {
+  color: #1a1500;
+}
+
+@media (max-width: 768px) {
+  footer .the-subscribe-area .btn-subscribe {
+    margin-right: 10px;
+  }
+}
+
+footer .the-subscribe-area .success,
+footer .the-subscribe-area .failure,
+footer .the-subscribe-area .loading,
+footer .the-subscribe-area .already-exists {
+  display: none;
+  font-size: 0.9em;
+}
+
+footer .the-subscribe-area .success {
+  color: green;
+}
+
+footer .the-subscribe-area .failure {
+  color: #DA1E1E;
+}
+
+footer .the-subscribe-area .loading,
+footer .the-subscribe-area .already-exists {
+  opacity: 0.8;
+}
+
+footer .the-subscribe-area .shown {
+  display: block;
+}
+
+footer .copyright {
+  margin-top: 3vh;
+}
+
+@media (max-width: 768px) {
+  footer .second {
+    margin-top: 6vh;
+  }
+}
+
 body {
   color: #1E1E28;
   max-height: 57.5%;
@@ -56,11 +218,13 @@ body #bg img {
 body #bg-mobile {
   position: fixed;
   z-index: 1;
-  bottom: 0;
   right: 0;
   left: 0;
   width: 100%;
-  max-height: 30%;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
 }
 
 body #bg-mobile img {
@@ -68,55 +232,33 @@ body #bg-mobile img {
   height: auto;
 }
 
-@media (min-width: 840px) {
-  .hide-desktop {
-    display: none;
+@media (max-width: 576px) {
+  body #bg-mobile {
+    bottom: 0;
   }
 }
 
-@media (max-width: 840px) {
-  .hide-mobile {
-    display: none;
-  }
-}
-
-.navbar {
-  font-family: Lato, sans-serif;
-}
-
-nav .brand-img {
-  width: 100px;
-}
-
-nav .register-btn {
-  padding: 10px 26px;
-  background: #FFD400;
-  -webkit-box-shadow: 0px 0px 8px 1px #ccaa00;
-          box-shadow: 0px 0px 8px 1px #ccaa00;
-  color: #004176;
-}
-
-@media (max-width: 840px) {
-  nav .register-btn {
-    margin-right: 10px;
+@media (min-width: 577px) {
+  body #bg-mobile {
+    bottom: -3.8em;
+    overflow: hidden;
   }
 }
 
 section#banner {
   height: calc(100% - 81px);
-  margin-bottom: 45vh;
+  margin-bottom: 27vh;
 }
 
-@media (max-width: 840px) {
+@media (max-width: 768px) {
   section#banner {
     height: calc(100% - 64.5px);
   }
 }
 
-@media (min-width: 840px) {
+@media (min-width: 769px) {
   section#banner {
     margin-top: 18vh;
-    margin-bottom: 27vh;
   }
 }
 
@@ -128,42 +270,80 @@ section#banner .date {
 }
 
 section#banner .subtitle {
+  font-size: 2.8em;
   margin: 16px 0 0 0;
-  font-size: 5.2em;
   color: #43AAFF;
   font-weight: 300;
 }
 
-@media (max-width: 840px) {
+@media (min-width: 577px) and (max-width: 768px) {
   section#banner .subtitle {
-    font-size: 2.8em;
+    font-size: 8vw;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  section#banner .subtitle {
+    font-size: 8.5vw;
+  }
+}
+
+@media (min-width: 769px) {
+  section#banner .subtitle {
+    font-size: 5.2em;
   }
 }
 
 section#banner .title {
-  font-size: 6em;
+  font-size: 3em;
   font-weight: 900;
   text-transform: uppercase;
 }
 
-@media (max-width: 840px) {
+@media (min-width: 577px) and (max-width: 768px) {
   section#banner .title {
-    font-size: 3.0em;
+    font-size: 10vw;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  section#banner .title {
+    font-size: 8vw;
+  }
+}
+
+@media (min-width: 769px) {
+  section#banner .title {
+    font-size: 6em;
   }
 }
 
 section#banner .date {
-  font-size: 2em;
-  line-height: 2.6rem;
+  font-size: 1.2em;
+  line-height: 1.3em;
   font-weight: 300;
   opacity: .8;
   margin-bottom: 18px;
 }
 
-@media (max-width: 840px) {
+@media (min-width: 577px) and (max-width: 768px) {
   section#banner .date {
-    font-size: 1.2em;
-    line-height: 1.3em;
+    font-size: 3.8vw;
+    line-height: 1vw;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  section#banner .date {
+    font-size: 3.5vw;
+    line-height: 2.6rem;
+  }
+}
+
+@media (min-width: 769px) {
+  section#banner .date {
+    font-size: 2.3em;
+    line-height: 2rem;
   }
 }
 
@@ -171,30 +351,32 @@ section#banner .cta-btn,
 section#banner .sec-btn {
   font-size: 1.1em;
   font-family: Lato, sans-serif;
-  -webkit-transition: all .05s ease-in-out;
-  transition: all .05s ease-in-out;
+  -webkit-transition: position .05s ease-in-out, -webkit-box-shadow .05s ease-in-out;
+  transition: position .05s ease-in-out, -webkit-box-shadow .05s ease-in-out;
+  transition: position .05s ease-in-out, box-shadow .05s ease-in-out;
+  transition: position .05s ease-in-out, box-shadow .05s ease-in-out, -webkit-box-shadow .05s ease-in-out;
 }
 
 section#banner .cta-btn:hover, section#banner .cta-btn:focus,
 section#banner .sec-btn:hover,
 section#banner .sec-btn:focus {
-  position: relative;
   -webkit-box-shadow: -3px 3px 0 1px;
           box-shadow: -3px 3px 0 1px;
   bottom: -3px;
   left: -3px;
+  position: relative;
 }
 
 section#banner .cta-btn {
   color: #1a1500;
-  padding: 12px 16px;
+  padding: 12px 1.8vw;
   border: 4px solid #1a1500;
   background-color: #FFD400;
   -webkit-box-shadow: -6px 6px 0px 1px #1a1500;
           box-shadow: -6px 6px 0px 1px #1a1500;
 }
 
-@media (max-width: 840px) {
+@media (max-width: 768px) {
   section#banner .cta-btn {
     margin: 8px auto 12px;
   }
@@ -209,7 +391,7 @@ section#banner .sec-btn {
           box-shadow: -6px 6px 0px 1px #1E1E28;
 }
 
-@media (max-width: 840px) {
+@media (max-width: 768px) {
   section#banner .sec-btn {
     margin: auto;
   }
@@ -217,16 +399,20 @@ section#banner .sec-btn {
 
 section#banner #countdown {
   position: absolute;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
 }
 
-@media (min-width: 840px) {
+@media (min-width: 769px) {
   section#banner #countdown {
     bottom: 0.8em;
     right: 2.8em;
   }
 }
 
-@media (max-width: 840px) {
+@media (max-width: 768px) {
   section#banner #countdown {
     position: fixed;
     left: 0;
@@ -240,7 +426,6 @@ section#banner #countdown {
 section#banner #countdown span {
   text-align: center;
   font-family: Oswald, sans-serif;
-  font-size: 3.55vw;
   font-weight: 900;
   display: inline-block;
   margin-bottom: 0;
@@ -253,9 +438,27 @@ section#banner #countdown span:last-child {
   margin-right: 0;
 }
 
-@media (max-width: 840px) {
+@media (max-width: 576px) {
   section#banner #countdown span {
     font-size: 10vw;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  section#banner #countdown span {
+    font-size: 8vw;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  section#banner #countdown span {
+    margin-right: 1.5rem;
+  }
+}
+
+@media (min-width: 769px) {
+  section#banner #countdown span {
+    font-size: 3.55vw;
   }
 }
 
@@ -276,7 +479,7 @@ section#banner #countdown i {
   right: -2em;
 }
 
-@media (max-width: 840px) {
+@media (max-width: 576px) {
   section#banner #countdown i {
     bottom: 0;
   }
@@ -298,9 +501,9 @@ section#banner #countdown .secs {
   color: #fff;
 }
 
-@media (max-width: 840px) {
+@media (max-width: 992px) {
   section#about {
-    margin-bottom: 300px;
+    margin-bottom: 80px;
   }
 }
 
@@ -340,7 +543,7 @@ section#about .about-content .text {
   opacity: .8;
 }
 
-section#about .about-content .sec-btn {
+section#about .about-content .about-btn {
   padding: 12px 16px;
   border: 2px solid #00335d;
   color: #00335d;
@@ -350,7 +553,7 @@ section#about .about-content .sec-btn {
   transition: all .1s ease-in-out;
 }
 
-section#about .about-content .sec-btn:hover, section#about .about-content .sec-btn:focus {
+section#about .about-content .about-btn:hover, section#about .about-content .about-btn:focus {
   position: relative;
   -webkit-box-shadow: -3px 3px 0 1px;
           box-shadow: -3px 3px 0 1px;
@@ -362,9 +565,30 @@ section#about .about-img {
   text-align: center;
 }
 
-@media (max-width: 840px) {
+@media (max-width: 576px) {
   section#about .about-img img {
     width: 100%;
   }
+}
+
+section#cause {
+  color: #fff;
+  font-family: Lato, sans-serif;
+  background-color: #1E1E28;
+  padding: 25px;
+}
+
+section#cause .single-item {
+  padding: 25px;
+}
+
+section#cause .single-item .icon-img {
+  top: -200px;
+  width: 200px;
+}
+
+section#cause .single-item .cause-title {
+  font-family: Oswald, sans-serif;
+  font-size: 2.5em;
 }
 /*# sourceMappingURL=main.css.map */

@@ -62,13 +62,16 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/5f8715b52c.js"></script>
 </head>
 
 <body>
-  <div id="bg" class="hide-mobile">
+  <div id="bg" class="hide-sm hide-md">
     <img src="assets/img/component.svg" alt="background">
   </div>
-  <div id="bg-mobile" class="hide-desktop">
+  <div id="bg-mobile" class="hide-lg hide-xl hide-not-xl">
     <img src="assets/img/component-mobile.svg" alt="background" class="bg">
   </div>
 
@@ -89,10 +92,10 @@
         <ul class="navbar-nav">
           <li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Speakers</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Sponsors</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Gallery</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="#speakers" class="nav-link">Speakers</a></li>
+          <li class="nav-item"><a href="#sponsors" class="nav-link">Sponsors</a></li>
+          <li class="nav-item"><a href="/high-board.html" class="nav-link">High Board</a></li>
+          <li class="nav-item"><a href="/contact-us.html" class="nav-link">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -102,19 +105,19 @@
     <div class="container">
       <h3 class="subtitle">Local Hack Day On</h3>
       <h2 class="title"><span id="typed-string">Learning</span></h2>
-      <p class="date">01 December 2019, STEM 6th of October</p>
+      <p class="date">12 October 2019, STEM 6th of October</p>
 
-      <a class="btn col-ms-4 col-lg-2 cta-btn" href="#registration">Register Now</a>
-      <a class="btn col-ms-4 col-lg-2 sec-btn" href="#about">Learn More</a>
+      <a class="btn col-md-4 col-lg-2 cta-btn" href="#registration">Register Now</a>
+      <a class="btn col-md-4 col-lg-2 sec-btn" href="#about">Learn More</a>
 
-      <div id="countdown" data-date="2019/12/01"></div>
+      <div id="countdown" data-date="2019/10/12"></div>
     </div>
   </section>
 
   <section id="about">
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 col-md-7 order-2 ordre-md-1">
+        <div class="col-sm-12 col-md-7 order-2 order-md-1">
           <div class="about-content-area">
             <h2 class="heading">STEM Local Hack Day</h2>
             <h3 class="subheading">Why STEM Local Hack Day?</h3>
@@ -125,7 +128,7 @@
                 handiwork and many tech wonders are all there for you to see and relish. It is be a delightful
                 experience full of hi-tech robots and interesting sessions. Don’t miss the chance!
               </p>
-              <a class="btn sec-btn" href="views/about.html">More About</a>
+              <a class="btn about-btn" href="about.html">More About</a>
             </div>
           </div>
         </div>
@@ -136,6 +139,109 @@
     </div>
   </section>
 
+  <section id="cause">
+    <div class="container-fluid">
+      <div class="contents">
+        <div class="row justify-content-center text-center">
+          <div class="single-item col-12 col-md-6 col-lg-4">
+            <div class="icon"><img src="assets/img/learn.png" alt="learn" class="icon-img"></div>
+            <h3 class="cause-title">Learn</h3>
+            <p class="text">
+              <strong>Local Hack Day: Learn</strong> is where you pick up new skills by experiencing a professional
+              conference first-hand. Attendees will participate in a series of workshops in which they'll learn
+              enjoyable and helpful skills such as publishing their first website, sending their first automatic
+              message, and, of course, others!
+            </p>
+          </div>
+          <div class="single-item col-12 col-md-6 col-lg-4">
+            <div class="icon"><img src="assets/img/build.png" alt="build" class="icon-img"></div>
+            <h3 class="cause-title">Build</h3>
+            <p class="text">
+              <strong>Local Hack Day: Build</strong> is where you get first-hand experience bringing their ideas to life
+              by participating in a hackathon. attendees will use hardware and software to build everything from
+              websites to robots to mobile apps and more.
+            </p>
+          </div>
+          <div class="single-item col-12 col-md-6 col-lg-4">
+            <div class="icon"><img src="assets/img/share.png" alt="share" class="icon-img"></div>
+            <h3 class="cause-title">Share</h3>
+            <p class="text">
+              <strong>Local Hack Day: Share</strong> is where you highlight the accomplishments of your work. Put the
+              final touches on your projects and develop your communication skills by participating in this demo day.
+              Attendees will spend time writing and speaking about the things they learned and built during the last
+              year. At the end of the event, they'll have shared their ideas with the world.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-4">
+          <div class="footer-logo">
+            <img src="assets/img/logo-full-white.svg" alt="Logo">
+          </div>
+        </div>
+        <div class="col-6 col-lg-4 second">
+          <h3 class="footer-title">Venue Location</h3>
+          <h4 class="date">
+            12 October, 2019
+          </h4>
+          <address>
+            STEM High School for Boys, Cosmic Village <br>
+            6th of October, Giza <br>
+            Egypt
+          </address>
+          <a href="https://goo.gl/maps/P5sGoTAvt9g5YWvm8" target="_blank"><i class="fa fa-map-marker"
+              aria-hidden="true"></i>
+            View Map
+            location</a>
+        </div>
+        <div class="col-6 col-lg-4 second">
+          <h3 class="footer-title">Social Connection</h3>
+          <p class="text">
+            You should connect social area for any update </p>
+          <ul class="list-inline social">
+            <li><a href="https://www.facebook.com/LHD19/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            </li>
+            <li><a href="https://twitter.com/STEM_LHD"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </li>
+            <li><a href="https://www.instagram.com/stem_lhd/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row justify-content-end the-subscribe-area">
+        <div class="col-12 col-lg-8">
+          <h3 class="footer-title">Subscribe & Stay Updated</h3>
+          <h4 class="footer-advice">If you are in a STEM School, don't bother; you'll already be hearing from us.</h4>
+          <form class="subscribe-form the-subscribe-form">
+            <div class="form-group form-group-email">
+              <input type="email" id="subscribe" placeholder="Ex: yourmajesty@gmail.com" class="form-control" />
+            </div>
+            <div class="form-group form-group-submit">
+              <button type="submit" name="subscribe-submit" id="subscribe-submit"
+                class="btn btn-subscribe">Subscribe</button>
+            </div>
+            <div class="loading">Loading... Please wait.</div>
+            <div class="success">Great! You have been added to our subscription list.</div>
+            <div class="already-exists">No worries! You are already on our subscription list.</div>
+            <div class="failure">Sorry, there has been an error while adding you, please try again later.
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="copyright">
+          <p class="text">© 2019 STEM Local Hack Day '19. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
   <script src="assets/js/vendor/jquery-3.3.1.slim.min.js"></script>
   <script src="assets/js/vendor/popper.min.js"></script>
   <script src="assets/js/vendor/bootstrap.min.js"></script>
@@ -143,6 +249,10 @@
   <script src="assets/js/vendor/countdown.js"></script>
   <script src="assets/js/vendor/smooth-scroll.polyfills.min.js"></script>
   <script src="assets/js/vendor/typed.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-firestore.js"></script>
+  <script src="assets/js/firebase_setup.js"></script>
+  <script src="assets/js/_common.js"></script>
   <script src="assets/js/main.js"></script>
 
 </body>
