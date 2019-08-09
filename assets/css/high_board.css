@@ -91,7 +91,6 @@ nav .register-btn:hover, nav .register-btn {
 footer {
   font-family: Lato, sans-serif;
   background-color: #1E1E28;
-  margin-top: 7vh;
   padding-top: 8vh;
   color: #fff;
 }
@@ -265,6 +264,7 @@ footer .copyright {
 
 section#content {
   font-family: Lato, sans-serif;
+  margin-bottom: 7vh;
 }
 
 section#content .title,

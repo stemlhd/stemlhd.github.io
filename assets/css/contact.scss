@@ -1,6 +1,9 @@
 @import "side_pages";
 
 section#form-area {
+    font-family: $body-font;
+    margin-bottom: 7vh;
+
     .cta-btn {
         font-size: 1.1em;
         font-family: $body-font;
