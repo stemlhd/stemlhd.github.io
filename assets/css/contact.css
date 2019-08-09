@@ -263,22 +263,31 @@ footer .copyright {
   opacity: .8;
 }
 
-section#content {
+section#form-area .cta-btn {
+  font-size: 1.1em;
+  font-family: Lato, sans-serif;
+  -webkit-transition: position .05s ease-in-out, -webkit-box-shadow .05s ease-in-out;
+  transition: position .05s ease-in-out, -webkit-box-shadow .05s ease-in-out;
+  transition: position .05s ease-in-out, box-shadow .05s ease-in-out;
+  transition: position .05s ease-in-out, box-shadow .05s ease-in-out, -webkit-box-shadow .05s ease-in-out;
+  color: #1a1500;
+  padding: 12px 1.8vw;
+  border: 4px solid #1a1500;
+  background-color: #FFD400;
+  -webkit-box-shadow: -6px 6px 0px 1px #1a1500;
+          box-shadow: -6px 6px 0px 1px #1a1500;
+  margin: auto;
+}
+
+section#form-area .cta-btn:hover, section#form-area .cta-btn:focus {
+  -webkit-box-shadow: -3px 3px 0 1px;
+          box-shadow: -3px 3px 0 1px;
+  bottom: -3px;
+  left: -3px;
+  position: relative;
+}
+
+section#form-area .csi-form-modal {
   font-family: Lato, sans-serif;
 }
-
-section#content .title,
-section#content .subtitle {
-  font-family: Oswald, sans-serif;
-}
-
-section#content .title {
-  font-size: 2em;
-  color: #1E1E28;
-}
-
-section#content .subtitle {
-  font-size: 1.2em;
-  color: #00335d;
-}
-/*# sourceMappingURL=high_board.css.map */
+/*# sourceMappingURL=contact.css.map */

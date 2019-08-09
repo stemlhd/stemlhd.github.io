@@ -137,7 +137,7 @@ footer .date {
 }
 
 footer .the-subscribe-area {
-  margin-top: 5vh;
+  margin-top: 1vh;
 }
 
 footer .the-subscribe-area .footer-advice {
@@ -184,6 +184,10 @@ footer .the-subscribe-area .already-exists {
 
 footer .the-subscribe-area .shown {
   display: block;
+}
+
+footer .social {
+  font-size: 2em;
 }
 
 footer .copyright {

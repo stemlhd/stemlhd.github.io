@@ -166,6 +166,8 @@ input[type=button]:focus {
 }
 
 
+
+
 nav .register-btn {
     padding: 10px 26px;
     background: main-color(app-yellow);
@@ -224,7 +226,7 @@ footer {
     }
 
     .the-subscribe-area {
-        margin-top: 5vh;
+        margin-top: 1vh;
 
         .footer-advice {
             font-size: 0.8em;
@@ -269,6 +271,10 @@ footer {
         .shown {
             display: block;
         }
+    }
+
+    .social {
+        font-size: 2em;
     }
 
     .copyright {

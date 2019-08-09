@@ -8,7 +8,7 @@
     <!-- The above 3 meta tags *must* come first in the head -->
 
     <!-- SITE TITLE -->
-    <title>High Board | STEM LHD - Local Hack Day</title>
+    <title>Contact | STEM LHD - Local Hack Day</title>
     <meta name="description" content="A hackathon taking place in 6th of October STEM High School." />
     <meta name="keywords"
         content="Event, Conference, Meetup, Local, Hack, Day, STEM, October, Egypt, Major, League, Hacking" />
@@ -57,7 +57,7 @@
     <link rel="stylesheet" type="text/css"
         href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700%7cLato:300,400,700" />
 
-    <link rel="stylesheet" href="assets/css/high_board.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -86,8 +86,8 @@
                     <li class="nav-item"><a href="/about.html" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="/#speakers" class="nav-link">Speakers</a></li>
                     <li class="nav-item"><a href="/#sponsors" class="nav-link">Sponsors</a></li>
-                    <li class="nav-item active"><a href="#" class="nav-link">High Board</a></li>
-                    <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="/high-board.html" class="nav-link">High Board</a></li>
+                    <li class="nav-item active"><a href="#" class="nav-link">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -98,45 +98,53 @@
         <div id="bg-right" class="hide-sm hide-md"><img src="assets/img/component3.svg" alt="shapes"></div>
 
         <div class="container text-center">
-            <h3 class="heading">STEM LHD High Board</h3>
+            <h3 class="heading">Get in touch</h3>
 
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb justify-content-center">
                     <li class="breadcrumb-item"><a href="/">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">High Board</li>
+                    <li class="breadcrumb-item active" aria-current="page">Contact</li>
                 </ol>
             </nav>
         </div>
     </div>
 
-    <section id="content">
+    <section id="form-area">
         <div class="container">
-            <div class="row">
-                <div class="logo col-12 col-lg-6 text-center">
-                    <img src="assets/img/logo-full.png" alt="logo">
+            <form id="contact-form" method="GET"
+                action="https://us-central1-stemlocalhackday.cloudfunctions.net/sendMail">
+                <div class="form-group">
+                    <input type="text" name="name" class="form-control name" id="cname" placeholder="Enter your name"
+                        required>
                 </div>
-                <div class="stuff col-12 col-lg-6">
-                    <h3 class="title">Who are we?</h3>
-                    <p class="text">
-                        We are a group of students who aspire to spread the usage of new technology. We also believe
-                        that our relation with technology doesn't have to stop there; contemorary students can, and will
-                        have to at some point, participate in its creation. We believe that this is the only way by
-                        which humanity will be able to advance through the information era.
-                    </p>
-                    <h4 class="subtitle">Our Steering Committee</h4>
-                    <ul>
-                        <li><strong>Chariman:</strong> Ahmed Abd El-Mageed</li>
-                        <li><strong>Vice Chairman:</strong> Omar Khattab</li>
-                        <li><strong>Treasurer:</strong> Mohanad Ashraf</li>
-                        <li><strong>Secretary:</strong> Yassmin Ahmed</li>
-                        <li><strong>Head of Human Resources:</strong> Shahd Ahmed</li>
-                        <li><strong>Head of Social Media:</strong> Mohamed Gomaa</li>
-                        <li><strong>Head of Media:</strong> Loay Ahmed</li>
-                        <li><strong>Head of Public Relations:</strong> Youssef Khalel</li>
-                        <li><strong>Head of Logistics:</strong> Amr Sofan</li>
-                        <li><strong>Vice Head of Logistics:</strong> Abdullah Gamal</li>
-                        <li><strong>Website Manager:</strong> Fady Adel</li>
-                    </ul>
+                <div class="form-group">
+                    <input type="email" name="senderMail" class="form-control email" id="cemail"
+                        placeholder="Enter your email address" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="subject" class="form-control subject" id="csubject"
+                        placeholder="Enter email subject" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control message" name="message" id="cmessage" rows="5"
+                        placeholder="Leave a message" required></textarea>
+                </div>
+                <button type="submit" name="submit" value="contact-form" class="btn cta-btn">Send Message</button>
+            </form>
+
+            <div id="csi-form-modal" class="modal fade csi-form-modal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content csi-modal-content">
+                        <div class="modal-header csi-modal-header">
+                            <button type="button" class="close brand-color-hover" data-dismiss="modal"
+                                aria-label="Close">
+                                <i class="fa fa-times-circle"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="alert csi-form-msg" role="alert"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -212,14 +220,15 @@
         </div>
     </footer>
 
-
-    <script src="assets/js/vendor/jquery-3.3.1.slim.min.js"></script>
+    <script src="assets/js/vendor/jquery-3.4.1.min.js"></script>
     <script src="assets/js/vendor/popper.min.js"></script>
     <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/jquery.validate.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-firestore.js"></script>
     <script src="assets/js/firebase_setup.js"></script>
     <script src="assets/js/_common.js"></script>
+    <script src="assets/js/contact.js"></script>
 </body>
 
 </html>
