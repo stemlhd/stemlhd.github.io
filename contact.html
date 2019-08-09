@@ -73,7 +73,7 @@
             <a class="navbar-brand" href="/"><img src="assets/img/logo.png" alt="STEM LHD" class="brand-img"></a>
 
             <div class="d-flex flex-row order-2 order-md-3">
-                <button class="btn register-btn">Attend</button>
+                <button class="btn register-btn" data-toggle="modal" data-target="#regModal">Attend</button>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent">
                     <span class="navbar-toggler-icon"></span>
@@ -93,6 +93,22 @@
             </div>
         </div>
     </nav>
+
+    <div class="modal fade" id="regModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Registration not open yet</h2>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <p>Registration for the event is not open yet. <a href="#the-subscribe-area"
+                            class="subscribe-modal-btn">Subscribe</a> to get notified
+                        when it is.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="jumbotron jumbotron-fluid banner">
         <div id="bg-left" class="hide-sm hide-md"><img src="assets/img/component2.svg" alt="shapes"></div>
@@ -179,19 +195,19 @@
                     <p class="text">
                         You should connect social area for any update </p>
                     <ul class="list-inline social">
-                        <li class="list-inline-item"><a href="https://www.facebook.com/LHD19/"><i
+                        <li class="list-inline-item"><a href="https://www.facebook.com/LHD19/" target="_blank"><i
                                     class="fab fa-facebook" aria-hidden="true"></i></a>
                         </li>
-                        <li class="list-inline-item"><a href="https://twitter.com/STEM_LHD"><i class="fab fa-twitter"
-                                    aria-hidden="true"></i></a>
+                        <li class="list-inline-item"><a href="https://twitter.com/STEM_LHD" target="_blank"><i
+                                    class="fab fa-twitter" aria-hidden="true"></i></a>
                         </li>
-                        <li class="list-inline-item"><a href="https://www.instagram.com/stem_lhd/"><i
+                        <li class="list-inline-item"><a href="https://www.instagram.com/stem_lhd/" target="_blank"><i
                                     class="fab fa-instagram" aria-hidden="true"></i></a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="row justify-content-end the-subscribe-area">
+            <div class="row justify-content-end the-subscribe-area" id="the-subscribe-area">
                 <div class="col-12 col-lg-8">
                     <h3 class="footer-title">Subscribe & Stay Updated</h3>
                     <h4 class="footer-advice">If you are in a STEM School, don't bother; you'll already be hearing from
@@ -225,6 +241,7 @@
     <script src="assets/js/vendor/popper.min.js"></script>
     <script src="assets/js/vendor/bootstrap.min.js"></script>
     <script src="assets/js/vendor/jquery.validate.js"></script>
+    <script src="assets/js/vendor/smooth-scroll.polyfills.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-firestore.js"></script>
     <script src="assets/js/firebase_setup.js"></script>

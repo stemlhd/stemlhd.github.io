@@ -20,7 +20,7 @@
   <meta name="twitter:url" content="https://stemlhd.github.io/" />
   <meta name="twitter:title" content="STEM LHD - Local Hack Day" /> <!-- maximum 140 char -->
   <meta name="twitter:description" content="STEM LHD - Local Hack Day" /> <!-- maximum 140 char -->
-  <meta name="twitter:image" content="assets/img/twittercardimg/twittercard-280-150.jpg" />
+  <meta name="twitter:image" content="assets/img/logo-full.png" />
   <!-- when you post this page url in twitter , this image will be shown -->
   <!-- twitter card ends from here -->
 
@@ -31,11 +31,11 @@
   <meta property="og:site_name" content="STEM LHD - Local Hack Day" />
   <!-- use this if you have  -->
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/img/opengraph/fbphoto.jpg" />
+  <meta property="og:image" content="assets/img/logo-full.png" />
   <!-- when you post this page url in facebook , this image will be shown -->
   <!-- facebook open graph ends from here -->
 
-  <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-icon-57x57.png">
+  <link rel=" apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/apple-icon-76x76.png">
@@ -82,7 +82,7 @@
       <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="STEM LHD" class="brand-img"></a>
 
       <div class="d-flex flex-row order-2 order-md-3">
-        <button class="btn register-btn">Attend</button>
+        <button class="btn register-btn reg" data-toggle="modal" data-target="#regModal">Attend</button>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -102,13 +102,29 @@
     </div>
   </nav>
 
+  <div class="modal fade" id="regModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Registration not open yet</h2>
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <p>Registration for the event is not open yet. <a href="#the-subscribe-area"
+              class="subscribe-modal-btn">Subscribe</a> to get notified
+            when it is.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <section id="banner">
     <div class="container">
       <h3 class="subtitle">Local Hack Day On</h3>
       <h2 class="title"><span id="typed-string">Learning</span></h2>
       <p class="date">12 October 2019, STEM 6th of October</p>
 
-      <a class="btn col-md-4 col-lg-2 cta-btn" href="#registration">Register Now</a>
+      <a class="btn col-md-4 col-lg-2 cta-btn reg" data-toggle="modal" data-target="#regModal">Register Now</a>
       <a class="btn col-md-4 col-lg-2 sec-btn" href="#about">Learn More</a>
 
       <div id="countdown" data-date="2019/10/12"></div>
@@ -414,14 +430,14 @@
           <p class="text">
             You should connect social area for any update </p>
           <ul class="list-inline social">
-            <li class="list-inline-item"><a href="https://www.facebook.com/LHD19/"><i class="fab fa-facebook"
-                  aria-hidden="true"></i></a>
+            <li class="list-inline-item"><a href="https://www.facebook.com/LHD19/" target="_blank"><i
+                  class="fab fa-facebook" aria-hidden="true"></i></a>
             </li>
-            <li class="list-inline-item"><a href="https://twitter.com/STEM_LHD"><i class="fab fa-twitter"
-                  aria-hidden="true"></i></a>
+            <li class="list-inline-item"><a href="https://twitter.com/STEM_LHD" target="_blank"><i
+                  class="fab fa-twitter" aria-hidden="true"></i></a>
             </li>
-            <li class="list-inline-item"><a href="https://www.instagram.com/stem_lhd/"><i class="fab fa-instagram"
-                  aria-hidden="true"></i></a>
+            <li class="list-inline-item"><a href="https://www.instagram.com/stem_lhd/" target="_blank"><i
+                  class="fab fa-instagram" aria-hidden="true"></i></a>
             </li>
           </ul>
         </div>
@@ -457,7 +473,6 @@
   <script src="assets/js/vendor/jquery-3.3.1.slim.min.js"></script>
   <script src="assets/js/vendor/popper.min.js"></script>
   <script src="assets/js/vendor/bootstrap.min.js"></script>
-
   <script src="assets/js/vendor/countdown.js"></script>
   <script src="assets/js/vendor/smooth-scroll.polyfills.min.js"></script>
   <script src="assets/js/vendor/typed.min.js"></script>

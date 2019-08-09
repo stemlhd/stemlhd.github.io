@@ -165,7 +165,14 @@ input[type=button]:focus {
     width: 100px;
 }
 
+.modal {
+    font-family: $body-font;
 
+    .modal-header {
+        font-family: $heading-font;
+
+    }
+}
 
 
 nav .register-btn {

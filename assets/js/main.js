@@ -1,9 +1,4 @@
 (function($) {
-  var scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 900,
-    updateURL: false
-  });
-
   var isMobile = function() {
     return window.matchMedia("only screen and (max-width: 760px)").matches;
   };

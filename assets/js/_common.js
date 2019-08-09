@@ -1,4 +1,9 @@
 (function($) {
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 900,
+    updateURL: false
+  });
+
   var isEmail = function(email) {
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return regex.test(email);
@@ -47,5 +52,10 @@
       emailInput.css("color", "#f00");
       return false;
     }
+  });
+
+  $("a.subscribe-modal-btn").on("click", function(event) {
+    console.log("clicked");
+    $("#regModal").modal("hide");
   });
 })(jQuery);

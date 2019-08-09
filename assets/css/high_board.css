@@ -71,6 +71,14 @@ input[type=button]:focus {
   width: 100px;
 }
 
+.modal {
+  font-family: Lato, sans-serif;
+}
+
+.modal .modal-header {
+  font-family: Oswald, sans-serif;
+}
+
 nav .register-btn {
   padding: 10px 26px;
   background: #FFD400;
