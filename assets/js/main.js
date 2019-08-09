@@ -14,10 +14,6 @@
     }
   });
 
-  $(".navbar-nav>li>a").on("click", function() {
-    $(".navbar-collapse").collapse("hide");
-  });
-
   var dataTime = $("#countdown").data("date"); // Date Format : Y/m/d
 
   $("#countdown").countdown(dataTime, function(event) {

@@ -1,6 +1,6 @@
 (function($) {
   var scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 900,
+    speed: 500,
     updateURL: false
   });
 
