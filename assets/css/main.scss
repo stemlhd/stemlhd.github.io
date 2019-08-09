@@ -352,6 +352,11 @@
      background: url("../img/speakers-bg.png");
  }
 
+ section#sponsors {
+     background: url("../img/sponsors-bg.jpg");
+ }
+
+
  section#speakers,
  section#sponsors {
      font-family: $body-font;
@@ -366,6 +371,10 @@
      width: 100%;
 
      text-align: center;
+
+     .inner-container {
+         mix-blend-mode: darken
+     }
 
      .heading {
          font-family: $heading-font;
@@ -456,29 +465,46 @@
          border-radius: 8px;
      }
 
-     .text {
-         font-size: 1em;
-         color: main-color(app-black);
+     .content {
          margin: 8px 0;
 
-         @include not-md {
-             font-size: 1.12em;
+         .title {
+             font-family: $heading-font;
+             color: main-color(app-blue-dark)
+         }
+
+         .text {
+             font-size: 1em;
+             color: main-color(app-black);
+
+             @include not-md {
+                 font-size: 1.12em;
+             }
+
+             @include up-md {
+                 margin: 12px 16px;
+             }
          }
 
          @include up-md {
-             margin: 12px 16px;
+             padding: 6px;
          }
+
      }
+
+
 
      .subscribe-text {
          margin-top: 10px;
          font-size: 1.1em;
          color: #fff;
 
+         a:hover {
+             text-decoration: none;
+         }
+
          @include up-md {
              font-size: 1em
          }
      }
  }
-
- section#sponsors {}

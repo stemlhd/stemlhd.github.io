@@ -598,6 +598,10 @@ section#speakers {
   background: url("../img/speakers-bg.png");
 }
 
+section#sponsors {
+  background: url("../img/sponsors-bg.jpg");
+}
+
 section#speakers,
 section#sponsors {
   font-family: Lato, sans-serif;
@@ -610,6 +614,11 @@ section#sponsors {
   height: 60vh;
   width: 100%;
   text-align: center;
+}
+
+section#speakers .inner-container,
+section#sponsors .inner-container {
+  mix-blend-mode: darken;
 }
 
 section#speakers .heading,
@@ -712,21 +721,35 @@ section#schedule .hey {
   border-radius: 8px;
 }
 
-section#schedule .text {
-  font-size: 1em;
-  color: #1E1E28;
+section#schedule .content {
   margin: 8px 0;
 }
 
+section#schedule .content .title {
+  font-family: Oswald, sans-serif;
+  color: #00335d;
+}
+
+section#schedule .content .text {
+  font-size: 1em;
+  color: #1E1E28;
+}
+
 @media (min-width: 769px) {
-  section#schedule .text {
+  section#schedule .content .text {
     font-size: 1.12em;
   }
 }
 
 @media (max-width: 768px) {
-  section#schedule .text {
+  section#schedule .content .text {
     margin: 12px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  section#schedule .content {
+    padding: 6px;
   }
 }
 
@@ -734,6 +757,10 @@ section#schedule .subscribe-text {
   margin-top: 10px;
   font-size: 1.1em;
   color: #fff;
+}
+
+section#schedule .subscribe-text a:hover {
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {
