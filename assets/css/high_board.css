@@ -275,6 +275,12 @@ section#content {
   margin-bottom: 7vh;
 }
 
+@media (max-width: 768px) {
+  section#content .logo img {
+    width: 85vw;
+  }
+}
+
 section#content .title,
 section#content .subtitle {
   font-family: Oswald, sans-serif;

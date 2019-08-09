@@ -4,6 +4,12 @@ section#content {
     font-family: $body-font;
     margin-bottom: 7vh;
 
+    @include up-md {
+        .logo img {
+            width: 85vw;
+        }
+    }
+
 
     .title,
     .subtitle {
