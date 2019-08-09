@@ -723,6 +723,7 @@ section#schedule .hey {
 
 section#schedule .content {
   margin: 8px 0;
+  padding: 6px;
 }
 
 section#schedule .content .title {
@@ -744,12 +745,6 @@ section#schedule .content .text {
 @media (max-width: 768px) {
   section#schedule .content .text {
     margin: 12px 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  section#schedule .content {
-    padding: 6px;
   }
 }
 
