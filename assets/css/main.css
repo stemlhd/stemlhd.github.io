@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700%7cLato:300,400,700);
 /* Maps */
 /* General */
 body,
@@ -619,14 +620,14 @@ section#sponsors {
   background-size: cover;
   -webkit-box-shadow: inset 0 0 30px #1E1E28;
           box-shadow: inset 0 0 30px #1E1E28;
-  height: 60vh;
+  height: 75vh;
   width: 100%;
   text-align: center;
 }
 
 section#speakers .inner-container,
 section#sponsors .inner-container {
-  mix-blend-mode: darken;
+  mix-blend-mode: multiply;
 }
 
 section#speakers .heading,
@@ -635,7 +636,7 @@ section#sponsors .heading {
   font-weight: 600;
   color: #1E1E28;
   font-size: 3.5em;
-  margin-bottom: 3vh;
+  margin-bottom: 4px;
 }
 
 @media (max-width: 768px) {
@@ -666,6 +667,11 @@ section#sponsors .answer a:hover {
   section#sponsors .answer {
     font-size: 1.1em;
   }
+}
+
+section#speakers .sub-call,
+section#sponsors .sub-call {
+  margin-top: 20px;
 }
 
 section#schedule {

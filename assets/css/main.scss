@@ -367,13 +367,13 @@
      background-size: cover;
      box-shadow: inset 0 0 30px main-color(app-black);
 
-     height: 60vh;
+     height: 75vh;
      width: 100%;
 
      text-align: center;
 
      .inner-container {
-         mix-blend-mode: darken
+         mix-blend-mode: multiply
      }
 
      .heading {
@@ -381,7 +381,7 @@
          font-weight: 600;
          color: main-color(app-black);
          font-size: 3.5em;
-         margin-bottom: 3vh;
+         margin-bottom: 4px;
 
          @include up-md {
              font-size: 2em;
@@ -403,6 +403,10 @@
          @include up-md {
              font-size: 1.1em;
          }
+     }
+
+     .sub-call {
+         margin-top: 20px;
      }
 
  }
