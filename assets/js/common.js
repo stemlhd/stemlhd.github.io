@@ -53,9 +53,4 @@
       return false;
     }
   });
-
-  $("a.subscribe-modal-btn").on("click", function(event) {
-    console.log("clicked");
-    $("#regModal").modal("hide");
-  });
 })(jQuery);
