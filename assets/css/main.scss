@@ -1,511 +1,504 @@
- @import "_common";
-
- body {
-     color: main-color(app-black);
-     max-height: 57.5%;
-
-     #bg {
-         position: absolute;
-         z-index: -1;
-         top: 0;
-         right: 0;
-         height: 100%;
-         max-width: 57vw;
-
-         img {
-             width: auto;
-             height: 100%;
-         }
-     }
-
-     #bg-mobile {
-         position: fixed;
-         z-index: 1;
-         right: 0;
-         left: 0;
-         width: 100%;
-
-         animation-duration: 0.6s;
-         animation-delay: 0s;
-
-         img {
-             width: 100%;
-             height: auto;
-         }
-
-         @include up-md {
-             bottom: 0;
-         }
-
-         @include not-md {
-             bottom: -3.8em;
-         }
-     }
- }
-
- section#banner {
-     height: calc(100% - 81px);
-
-     @include up-md {
-         height: calc(100% - 64.5px);
-     }
-
-     margin-bottom: 27vh;
-
-     @include not-md {
-         margin-top: 18vh;
-     }
-
-     .title,
-     .subtitle,
-     .date {
-         line-height: 1.5em;
-         font-family: $heading-font;
-     }
-
-     .subtitle {
-         font-size: 2.8em;
-         margin: 16px 0 0 0;
-         color: main-color(app-blue);
-         font-weight: 300;
-
-         @include md {
-             font-size: 8vw;
-         }
-
-         @include lg {
-             font-size: 8.5vw;
-         }
-
-         @include not-lg {
-             font-size: 5.2em
-         }
-
-     }
-
-     .title {
-         font-size: 3em;
-         font-weight: 900;
-         text-transform: uppercase;
-
-         @include md {
-             font-size: 10vw;
-         }
-
-         @include lg {
-             font-size: 8vw;
-         }
-
-         @include not-lg {
-             font-size: 6em
-         }
-     }
-
-     .date {
-         font-size: 1.2em;
-         line-height: 1.3em;
-         font-weight: 300;
-         opacity: .8;
-         margin-bottom: 18px;
-
-         @include md {
-             font-size: 3.8vw;
-             line-height: 1vw;
-         }
-
-         @include lg {
-             font-size: 3.5vw;
-             line-height: 2.6rem;
-         }
-
-         @include not-lg {
-             font-size: 2.3em;
-             line-height: 2rem
-         }
-     }
-
-     .cta-btn,
-     .sec-btn {
-         font-size: 1.1em;
-         font-family: $body-font;
-         transition: position .05s ease-in-out, box-shadow .05s ease-in-out;
-
-         &:hover,
-         &:focus {
-             box-shadow: -3px 3px 0 1px;
-             bottom: -3px;
-             left: -3px;
-             position: relative;
-         }
-     }
-
-     .cta-btn {
-         color: main-color(app-yellow-dark);
-         padding: 12px 1.8vw;
-         border: 4px solid main-color(app-yellow-dark);
-         background-color: main-color(app-yellow);
-         box-shadow: -6px 6px 0px 1px main-color(app-yellow-dark);
-
-         @include up-md {
-             margin: 8px auto 12px;
-         }
-     }
-
-     .sec-btn {
-         margin-left: 16px;
-         padding: 12px 16px;
-         border: 4px solid main-color(app-black);
-         color: main-color(app-black);
-         box-shadow: -6px 6px 0px 1px main-color(app-black);
-
-
-         @include up-md {
-             margin: auto;
-         }
-     }
-
-
-     #countdown {
-         position: absolute;
-         animation-duration: 0.6s;
-         animation-delay: 0s;
-
-         @include not-md {
-             bottom: 0.8em;
-             right: 2.8em;
-         }
-
-         @include up-md {
-             position: fixed;
-             left: 0;
-             right: 0;
-             bottom: 0;
-             text-align: center;
-             z-index: 1;
-         }
-
-         span {
-             text-align: center;
-             font-family: $heading-font;
-             font-weight: 900;
-             display: inline-block;
-             margin-bottom: 0;
-             margin-right: 3.8rem;
-             letter-spacing: .16rem;
-             position: relative;
-
-             &:last-child {
-                 margin-right: 0;
-             }
-
-             @include sm {
-                 font-size: 10vw
-             }
-
-             @include md {
-                 font-size: 8vw;
-             }
-
-             @include lg {
-                 margin-right: 1.5rem
-             }
-
-             @include not-lg {
-                 font-size: 3.55vw;
-             }
-         }
-
-         i {
-             font-family: $body-font;
-             font-size: 0.35em;
-             line-height: 3rem;
-             color: #fff;
-             text-transform: uppercase;
-             font-weight: 300;
-             letter-spacing: normal;
-             transform: rotate(-90deg);
-             font-style: normal;
-             display: inline-block;
-             position: absolute;
-             bottom: 0.7em;
-             right: -2em;
-
-             @include sm {
-                 bottom: 0;
-             }
-         }
-
-         .days {
-             color: main-color(app-yellow)
-         }
-
-         .hrs {
-             color: main-color(app-red)
-         }
-
-         .mins {
-             color: main-color(app-blue)
-         }
-
-         .secs {
-             color: #fff
-         }
-
-     }
- }
-
- section#about {
-
-     @include up-lg {
-         margin-bottom: 80px;
-     }
-
-     .heading,
-     .subheading {
-         font-family: $heading-font
-     }
-
-     .heading {
-         text-align: center;
-         display: block;
-         font-size: 2.52em;
-         line-height: 1.4em;
-         color: main-color(app-black);
-         font-weight: 900;
-         text-transform: uppercase;
-     }
-
-     .subheading {
-         font-size: 1.3em;
-         line-height: 3rem;
-         color: main-color(app-blue-dark);
-         font-weight: 400;
-         text-align: center;
-         margin: 0;
-         opacity: .6
-     }
-
-     .about-content {
-         text-align: center;
-         font-family: $body-font;
-
-         .text {
-             line-height: 1.55em;
-             letter-spacing: 0.05em;
-             opacity: .8;
-         }
-
-         .about-btn {
-             padding: 12px 16px;
-             border: 2px solid main-color(app-blue-dark);
-             color: main-color(app-blue-dark);
-
-             box-shadow: -6px 6px 0px 1px main-color(app-blue-dark);
-             transition: all .1s ease-in-out;
-
-             &:hover,
-             &:focus {
-                 position: relative;
-                 box-shadow: -3px 3px 0 1px;
-                 bottom: -3px;
-                 left: -3px;
-
-             }
-         }
-     }
-
-     .about-img {
-         text-align: center;
-
-         img {
-             @include sm {
-                 width: 100%;
-             }
-         }
-     }
- }
-
- section#cause {
-     color: #fff;
-     font-family: $body-font;
-     background-color: main-color(app-black);
-     padding: 25px;
-
-     .single-item {
-         padding: 25px;
-
-         .icon-img {
-             top: -200px;
-             width: 200px;
-         }
-
-         .cause-title {
-             font-family: $heading-font;
-             font-size: 2.5em;
-         }
-
-     }
- }
-
-
- section#speakers {
-     background: url("../img/speakers-bg.png");
- }
-
- section#sponsors {
-     background: url("../img/sponsors-bg.jpg");
- }
-
-
- section#speakers,
- section#sponsors {
-     font-family: $body-font;
-
-     background-attachment: fixed;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
-     box-shadow: inset 0 0 30px main-color(app-black);
-
-     height: 75vh;
-     width: 100%;
-
-     text-align: center;
-
-     .inner-container {
-         mix-blend-mode: multiply
-     }
-
-     .heading {
-         font-family: $heading-font;
-         font-weight: 600;
-         color: main-color(app-black);
-         font-size: 3.5em;
-         margin-bottom: 4px;
-
-         @include up-md {
-             font-size: 2em;
-         }
-     }
-
-     .answer {
-         font-size: 1.2em;
-
-         .mono {
-             font-family: monospace;
-             color: main-color(app-red)
-         }
-
-         a:hover {
-             text-decoration: none;
-         }
-
-         @include up-md {
-             font-size: 1.1em;
-         }
-     }
-
-     .sub-call {
-         margin-top: 20px;
-     }
-
- }
-
- section#schedule {
-     font-family: $body-font;
-     background-color: main-color(app-black);
-     padding: 26px;
-
-     a.nav-link {
-         font-family: $heading-font;
-         font-size: 1.1em;
-         color: main-color(app-black);
-         background-color: #fff;
-
-         margin: 8px 5px;
-         opacity: 0.9;
-
-         @include up-md {
-             width: 40%;
-         }
-
-         @include not-md {
-             font-size: 1.3em;
-         }
-     }
-
-     a.nav-link.active {
-         background-color: main-color(app-yellow);
-         color: main-color(app-black);
-         opacity: 1;
-
-         @include not-md {
-             &::before {
-                 content: '';
-                 left: -1.2em;
-                 display: inline-block;
-                 position: relative;
-                 width: 1em;
-                 height: 1em;
-                 background-color: main-color(app-blue);
-                 border: 2px solid main-color(app-blue);
-                 border-radius: 50%;
-             }
-         }
-     }
-
-     .heading {
-         color: #fff;
-         font-family: $heading-font;
-         font-size: 3.5em;
-         margin-bottom: 3vh;
-     }
-
-     .hey {
-         background: #fff;
-         opacity: 0.9;
-         margin: 8px 0;
-
-         border-radius: 8px;
-     }
-
-     .content {
-         margin: 8px 0;
-
-         .title {
-             font-family: $heading-font;
-             color: main-color(app-blue-dark)
-         }
-
-         .text {
-             font-size: 1em;
-             color: main-color(app-black);
-
-             @include not-md {
-                 font-size: 1.12em;
-             }
-
-             @include up-md {
-                 margin: 12px 16px;
-             }
-         }
-
-         padding: 6px;
-     }
-
-
-
-     .subscribe-text {
-         margin-top: 10px;
-         font-size: 1.1em;
-         color: #fff;
-
-         a:hover {
-             text-decoration: none;
-         }
-
-         @include up-md {
-             font-size: 1em
-         }
-     }
- }
+@import "_common";
+@import "_sponsors-section";
+
+body {
+  color: main-color(app-black);
+  max-height: 57.5%;
+
+  #bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    height: 100%;
+    max-width: 57vw;
+
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  #bg-mobile {
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    left: 0;
+    width: 100%;
+
+    animation-duration: 0.6s;
+    animation-delay: 0s;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    @include up-md {
+      bottom: 0;
+    }
+
+    @include not-md {
+      bottom: -3.8em;
+    }
+  }
+}
+
+section#banner {
+  height: calc(100% - 81px);
+
+  @include up-md {
+    height: calc(100% - 64.5px);
+  }
+
+  margin-bottom: 27vh;
+
+  @include not-md {
+    margin-top: 18vh;
+  }
+
+  .title,
+  .subtitle,
+  .date {
+    line-height: 1.5em;
+    font-family: $heading-font;
+  }
+
+  .subtitle {
+    font-size: 2.8em;
+    margin: 16px 0 0 0;
+    color: main-color(app-blue);
+    font-weight: 300;
+
+    @include md {
+      font-size: 8vw;
+    }
+
+    @include lg {
+      font-size: 8.5vw;
+    }
+
+    @include not-lg {
+      font-size: 5.2em;
+    }
+  }
+
+  .title {
+    font-size: 3em;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    @include md {
+      font-size: 10vw;
+    }
+
+    @include lg {
+      font-size: 8vw;
+    }
+
+    @include not-lg {
+      font-size: 6em;
+    }
+  }
+
+  .date {
+    font-size: 1.2em;
+    line-height: 1.3em;
+    font-weight: 300;
+    opacity: 0.8;
+    margin-bottom: 18px;
+
+    @include md {
+      font-size: 3.8vw;
+      line-height: 1vw;
+    }
+
+    @include lg {
+      font-size: 3.5vw;
+      line-height: 2.6rem;
+    }
+
+    @include not-lg {
+      font-size: 2.3em;
+      line-height: 2rem;
+    }
+  }
+
+  .cta-btn,
+  .sec-btn {
+    font-size: 1.1em;
+    font-family: $body-font;
+    transition: position 0.05s ease-in-out, box-shadow 0.05s ease-in-out;
+
+    &:hover,
+    &:focus {
+      box-shadow: -3px 3px 0 1px;
+      bottom: -3px;
+      left: -3px;
+      position: relative;
+    }
+  }
+
+  .cta-btn {
+    color: main-color(app-yellow-dark);
+    padding: 12px 1.8vw;
+    border: 4px solid main-color(app-yellow-dark);
+    background-color: main-color(app-yellow);
+    box-shadow: -6px 6px 0px 1px main-color(app-yellow-dark);
+
+    @include up-md {
+      margin: 8px auto 12px;
+    }
+  }
+
+  .sec-btn {
+    margin-left: 16px;
+    padding: 12px 16px;
+    border: 4px solid main-color(app-black);
+    color: main-color(app-black);
+    box-shadow: -6px 6px 0px 1px main-color(app-black);
+
+    @include up-md {
+      margin: auto;
+    }
+  }
+
+  #countdown {
+    position: absolute;
+    animation-duration: 0.6s;
+    animation-delay: 0s;
+
+    @include not-md {
+      bottom: 0.8em;
+      right: 2.8em;
+    }
+
+    @include up-md {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      text-align: center;
+      z-index: 1;
+    }
+
+    span {
+      text-align: center;
+      font-family: $heading-font;
+      font-weight: 900;
+      display: inline-block;
+      margin-bottom: 0;
+      margin-right: 3.8rem;
+      letter-spacing: 0.16rem;
+      position: relative;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      @include sm {
+        font-size: 10vw;
+      }
+
+      @include md {
+        font-size: 8vw;
+      }
+
+      @include lg {
+        margin-right: 1.5rem;
+      }
+
+      @include not-lg {
+        font-size: 3.55vw;
+      }
+    }
+
+    i {
+      font-family: $body-font;
+      font-size: 0.35em;
+      line-height: 3rem;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: 300;
+      letter-spacing: normal;
+      transform: rotate(-90deg);
+      font-style: normal;
+      display: inline-block;
+      position: absolute;
+      bottom: 0.7em;
+      right: -2em;
+
+      @include sm {
+        bottom: 0;
+      }
+    }
+
+    .days {
+      color: main-color(app-yellow);
+    }
+
+    .hrs {
+      color: main-color(app-red);
+    }
+
+    .mins {
+      color: main-color(app-blue);
+    }
+
+    .secs {
+      color: #fff;
+    }
+  }
+}
+
+section#about {
+  @include up-lg {
+    margin-bottom: 80px;
+  }
+
+  @include not-sm {
+    margin-bottom: 1rem;
+  }
+
+  .heading,
+  .subheading {
+    font-family: $heading-font;
+  }
+
+  .heading {
+    text-align: center;
+    display: block;
+    font-size: 2.52em;
+    line-height: 1.4em;
+    color: main-color(app-black);
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .subheading {
+    font-size: 1.3em;
+    line-height: 3rem;
+    color: main-color(app-blue-dark);
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    opacity: 0.6;
+  }
+
+  .about-content {
+    text-align: center;
+    font-family: $body-font;
+
+    .text {
+      line-height: 1.55em;
+      letter-spacing: 0.05em;
+      opacity: 0.8;
+    }
+
+    .about-btn {
+      padding: 12px 16px;
+      border: 2px solid main-color(app-blue-dark);
+      color: main-color(app-blue-dark);
+
+      box-shadow: -6px 6px 0px 1px main-color(app-blue-dark);
+      transition: all 0.1s ease-in-out;
+
+      &:hover,
+      &:focus {
+        position: relative;
+        box-shadow: -3px 3px 0 1px;
+        bottom: -3px;
+        left: -3px;
+      }
+    }
+  }
+
+  .about-img {
+    text-align: center;
+
+    img {
+      @include sm {
+        width: 100%;
+      }
+    }
+  }
+
+  @include not-md {
+    .heading,
+    .about-img {
+      margin: 2rem 0;
+    }
+  }
+}
+
+section#cause {
+  color: #fff;
+  font-family: $body-font;
+  background-color: main-color(app-black);
+  padding: 25px;
+
+  .single-item {
+    padding: 25px;
+
+    .icon-img {
+      top: -200px;
+      width: 200px;
+    }
+
+    .cause-title {
+      font-family: $heading-font;
+      font-size: 2.5em;
+    }
+  }
+}
+
+section#speakers {
+  background: url("../img/speakers-bg.png");
+
+  font-family: $body-font;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 0 30px main-color(app-black);
+
+  height: 75vh;
+  width: 100%;
+
+  text-align: center;
+
+  .inner-container {
+    mix-blend-mode: multiply;
+  }
+
+  .heading {
+    font-family: $heading-font;
+    font-weight: 600;
+    color: main-color(app-black);
+    font-size: 3.5em;
+    margin-bottom: 4px;
+
+    @include up-md {
+      font-size: 2em;
+    }
+  }
+
+  .answer {
+    font-size: 1.2em;
+
+    .mono {
+      font-family: monospace;
+      color: main-color(app-red);
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    @include up-md {
+      font-size: 1.1em;
+    }
+  }
+
+  .sub-call {
+    margin-top: 20px;
+  }
+}
+
+section#schedule {
+  font-family: $body-font;
+  background-color: main-color(app-black);
+  padding: 26px;
+
+  a.nav-link {
+    font-family: $heading-font;
+    font-size: 1.1em;
+    color: main-color(app-black);
+    background-color: #fff;
+
+    margin: 8px 5px;
+    opacity: 0.9;
+
+    @include up-md {
+      width: 40%;
+    }
+
+    @include not-md {
+      font-size: 1.3em;
+    }
+  }
+
+  a.nav-link.active {
+    background-color: main-color(app-yellow);
+    color: main-color(app-black);
+    opacity: 1;
+
+    @include not-md {
+      &::before {
+        content: "";
+        left: -1.2em;
+        display: inline-block;
+        position: relative;
+        width: 1em;
+        height: 1em;
+        background-color: main-color(app-blue);
+        border: 2px solid main-color(app-blue);
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .heading {
+    color: #fff;
+    font-family: $heading-font;
+    font-size: 3.5em;
+    margin-bottom: 3vh;
+  }
+
+  .hey {
+    background: #fff;
+    opacity: 0.9;
+    margin: 8px 0;
+
+    border-radius: 8px;
+  }
+
+  .content {
+    margin: 8px 0;
+
+    .title {
+      font-family: $heading-font;
+      color: main-color(app-blue-dark);
+    }
+
+    .text {
+      font-size: 1em;
+      color: main-color(app-black);
+
+      @include not-md {
+        font-size: 1.12em;
+      }
+
+      @include up-md {
+        margin: 12px 16px;
+      }
+    }
+
+    padding: 6px;
+  }
+
+  .subscribe-text {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #fff;
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    @include up-md {
+      font-size: 1em;
+    }
+  }
+}

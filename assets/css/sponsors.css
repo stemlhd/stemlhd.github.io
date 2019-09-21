@@ -1,0 +1,330 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700%7cLato:300,400,700);
+/* Maps */
+/* General */
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: Lato, sans-serif;
+  font-size: 1.6rem;
+  padding: 0;
+  margin: 0;
+  line-height: 2.4rem;
+}
+
+a,
+a.active,
+a:focus,
+a:hover {
+  text-decoration: none;
+  outline: 0;
+}
+
+.btn:active,
+.btn:focus,
+a,
+button:active,
+button:focus,
+input[type=submit]:active,
+input[type=submit]:focus,
+input[type=button]:active,
+input[type=button]:focus {
+  outline: 0 !important;
+}
+
+@media (max-width: 576px) {
+  .hide-sm {
+    display: none;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .hide-md {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .hide-lg {
+    display: none;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  .hide-xl {
+    display: none;
+  }
+}
+
+@media (min-width: 1201px) {
+  .hide-not-xl {
+    display: none;
+  }
+}
+
+.navbar {
+  font-family: Lato, sans-serif;
+}
+
+.brand-img {
+  width: 100px;
+}
+
+.modal {
+  font-family: Lato, sans-serif;
+}
+
+.modal .modal-header {
+  font-family: Oswald, sans-serif;
+}
+
+nav .register-btn {
+  padding: 10px 26px;
+  background: #FFD400;
+  -webkit-box-shadow: 0px 0px 8px 1px #ccaa00;
+          box-shadow: 0px 0px 8px 1px #ccaa00;
+}
+
+nav .register-btn:hover, nav .register-btn {
+  color: #1a1500;
+}
+
+@media (max-width: 768px) {
+  nav .register-btn {
+    margin-right: 10px;
+  }
+}
+
+footer {
+  font-family: Lato, sans-serif;
+  background-color: #1E1E28;
+  padding-top: 8vh;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  footer {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 768px) {
+  footer .footer-logo {
+    text-align: center;
+  }
+}
+
+footer .footer-logo img {
+  width: 210px;
+}
+
+footer .footer-title {
+  font-family: Oswald, sans-serif;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  footer .footer-title {
+    font-size: 1.2em;
+  }
+}
+
+footer .date {
+  font-family: Oswald, sans-serif;
+  color: #FFD400;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  footer .date {
+    font-size: 0.8em;
+  }
+}
+
+footer .the-subscribe-area {
+  margin-top: 1vh;
+}
+
+footer .the-subscribe-area .footer-advice {
+  font-size: 0.8em;
+}
+
+footer .the-subscribe-area .btn-subscribe {
+  padding: 10px 26px;
+  background: #FFD400;
+  -webkit-box-shadow: 0px 0px 8px 1px #ccaa00;
+          box-shadow: 0px 0px 8px 1px #ccaa00;
+}
+
+footer .the-subscribe-area .btn-subscribe:hover, footer .the-subscribe-area .btn-subscribe {
+  color: #1a1500;
+}
+
+@media (max-width: 768px) {
+  footer .the-subscribe-area .btn-subscribe {
+    margin-right: 10px;
+  }
+}
+
+footer .the-subscribe-area .success,
+footer .the-subscribe-area .failure,
+footer .the-subscribe-area .loading,
+footer .the-subscribe-area .already-exists {
+  display: none;
+  font-size: 0.9em;
+}
+
+footer .the-subscribe-area .success {
+  color: green;
+}
+
+footer .the-subscribe-area .failure {
+  color: #DA1E1E;
+}
+
+footer .the-subscribe-area .loading,
+footer .the-subscribe-area .already-exists {
+  opacity: 0.8;
+}
+
+footer .the-subscribe-area .shown {
+  display: block;
+}
+
+footer .social {
+  font-size: 2em;
+}
+
+footer .copyright {
+  margin-top: 3vh;
+}
+
+@media (max-width: 768px) {
+  footer .second {
+    margin-top: 6vh;
+  }
+}
+
+.jumbotron {
+  background: #1E1E28 !important;
+}
+
+.navbar-bg {
+  z-index: -1;
+  background: #1E1E28;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+.banner {
+  height: 40%;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner #bg-right,
+.banner #bg-left {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.banner #bg-right img,
+.banner #bg-left img {
+  height: 40vh;
+}
+
+.banner #bg-right {
+  right: 0;
+}
+
+.banner #bg-left {
+  left: 0;
+}
+
+.banner .heading,
+.banner .breadcrumb {
+  position: relative;
+}
+
+.banner .heading {
+  font-family: Oswald, sans-serif;
+  font-size: 3.5em;
+  color: #fff;
+}
+
+.banner .breadcrumb {
+  background: 0 0;
+  padding: 0;
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.banner .breadcrumb .active {
+  color: white;
+  opacity: .8;
+}
+
+section#sponsors {
+  background: #e9e9ea;
+  font-family: Lato, sans-serif;
+  color: #1E1E28;
+  padding: 1.5rem 0 3rem;
+}
+
+section#sponsors .heading {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+section#sponsors .subheading {
+  font-size: 1.07rem;
+  margin-bottom: 2rem;
+  color: #4a4a62;
+}
+
+section#sponsors .title {
+  font-size: 2.3rem;
+  margin-bottom: 2rem;
+  color: #00335d;
+}
+
+section#sponsors .title,
+section#sponsors .heading {
+  font-family: Oswald, sans-serif;
+}
+
+section#sponsors img {
+  width: 280px;
+  margin-bottom: 3rem;
+}
+
+section#sponsors .spon-btn {
+  padding: 12px 16px;
+  border: 2px solid #1E1E28;
+  color: #1E1E28;
+  -webkit-box-shadow: -6px 6px 0px 1px #1E1E28;
+          box-shadow: -6px 6px 0px 1px #1E1E28;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+section#sponsors .spon-btn:hover, section#sponsors .spon-btn:focus {
+  position: relative;
+  -webkit-box-shadow: -3px 3px 0 1px;
+          box-shadow: -3px 3px 0 1px;
+  bottom: -3px;
+  left: -3px;
+}
+
+section#sponsors {
+  background: #ffffff;
+}
+/*# sourceMappingURL=sponsors.css.map */

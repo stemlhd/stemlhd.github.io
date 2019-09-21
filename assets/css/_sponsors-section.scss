@@ -1,0 +1,55 @@
+section#sponsors {
+  background: #e9e9ea;
+  font-family: $body-font;
+
+  color: main-color(app-black);
+
+  padding: 1.5rem 0 3rem;
+
+  .heading {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+
+  .subheading {
+    font-size: 1.07rem;
+    margin-bottom: 2rem;
+    color: lighten(main-color(app-black), 20%);
+  }
+
+  .title {
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
+    color: main-color(app-blue-dark);
+  }
+
+  .title,
+  .heading {
+    font-family: $heading-font;
+  }
+
+  img {
+    width: 280px;
+    margin-bottom: 3rem;
+  }
+
+  $darkened-red: main-color(app-black);
+
+  .spon-btn {
+    padding: 12px 16px;
+    border: 2px solid $darkened-red;
+    color: $darkened-red;
+
+    box-shadow: -6px 6px 0px 1px $darkened-red;
+    transition: all 0.1s ease-in-out;
+
+    &:hover,
+    &:focus {
+      position: relative;
+      box-shadow: -3px 3px 0 1px;
+      bottom: -3px;
+      left: -3px;
+    }
+  }
+}
